@@ -1,0 +1,60 @@
+/* Agenda header */
+.agenda-header {
+    text-align: center;
+    position: relative;
+}
+
+.agenda-header p {
+    position: relative;
+    display: inline-block;
+    border: 5px solid black;
+    background-color: #ffffff;
+    color:black;
+    padding: 20px;
+    margin:10px 0;
+}
+
+.agenda-header hr {
+    position: absolute;
+    border: 2px solid black;
+    width:100%;
+    margin:0;
+    top:42px;
+    z-index: 0;
+}
+
+/* Agenda body */
+.agenda-body {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 0 5%;
+    flex-wrap: wrap;
+}
+
+.agenda-body img {
+    width: 70%;
+    margin: 5px 0;
+}
+
+.agenda-body a {
+    flex: 1 0 15%; /* atau bias disebut flex-basis: . .; */
+    border: 5px solid blue;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+.agenda-body a:hover {
+    background-color: blue;
+    transition: 0.3s;
+}
+
+.agenda-body p {
+    margin: 8px;
+}
+
+.agenda-body .tgl{
+    margin: 3px;
+    background-color: red;
+}
