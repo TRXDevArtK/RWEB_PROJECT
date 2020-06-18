@@ -18,7 +18,7 @@
         <h4>Di Rumah Sakit Jogja</h4>
     </div>
     <div class="pageshow">
-        <a href="daftar.php">
+        <a href="/public/daftar">
             <img src="img/kamar1.jpeg" alt="kamar1">
             <p>INI TEST PAGESHOW</p>
         </a>
