@@ -32,5 +32,39 @@ class Validation
 
 	//--------------------------------------------------------------------
 	// Rules
+	// Validasi Pelanggan
+	public $pelanggan = [
+		'ktp'         	=> 'required',
+		'nama'       	=> 'required',
+		'jk'			=> 'required',
+		'tgl'			=> 'required',
+		'tlp'			=> 'required',
+		'email'			=> 'required',
+		'verifikasi'	=> ''
+	];
+	 
+	public $pelanggan_errors = [
+		'ktp'=> [
+			'required'  => 'KTP wajib diisi.'
+		],
+		'nama'=> [
+			'required'  => 'Nama wajib diisi.'
+		],
+		'jk'=> [
+			'required'  => 'Jenis Kelamin wajib diisi.'
+		],
+		'tgl'=> [
+			'required'  => 'Tanggal wajib diisi.'
+		],
+		'tlp'=> [
+			'required'  => 'Telephone wajib diisi.'
+		],
+		'email'=> [
+			'required'  => 'Email wajib diisi.'
+		]
+		// 'verifikasi'=> [
+		// 	'required'  => 'Verifikasi wajib diisi.'
+		// ]
+	];
 	//--------------------------------------------------------------------
 }
