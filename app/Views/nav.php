@@ -13,9 +13,9 @@
     <header>
         <div class="menu">
             <a class="menu-img" href="index.php"><img src="img/logo.png"></a>
-            <a href="daftar.php">Daftar</a>
-            <a href="agenda.php">Agenda</a>
-            <a href="kontak.php">Kontak</a>
+            <a href="/public/daftar">Daftar</a>
+            <a href="/public/agenda">Agenda</a>
+            <a href="/public/kontak">Kontak</a>
             <a href="#">Halaman Utama</a>
             <a href="#">Halaman Utama</a>
             <a href="#">Halaman Utama</a>
