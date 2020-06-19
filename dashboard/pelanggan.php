@@ -1,4 +1,5 @@
 <?php
+    session_start();
     #include sesuatu disini
     include_once "auth_database.php";
 ?>
@@ -39,8 +40,8 @@
                             <h4 class="modal-title text-center">Data Presensi</h4>
                     </div>
                     <div class="modal-body">
-                        <form action="#" method="post" id="peserta">
-                
+                        <form action="#" method="post" id="pelanggan">
+                            <input type="hidden" name="id" id="id" value="" readonly>
                             <input type="text" name="nama" placeholder="Masukkan Nama" id="nama"
                                                       oninvalid="this.setCustomValidity('Silahkan Masukkan Nama Anda')"
                                                         accept=""oninput="this.setCustomValidity('')" required="require">
@@ -53,7 +54,7 @@
                                                       oninvalid="this.setCustomValidity('Silahkan Masukkan Email Anda')"
                                                         accept=""oninput="this.setCustomValidity('')">
 
-                            <input type="number" name="noktp" placeholder="Masukkan No KTP" id="ktp"
+                            <input type="number" name="ktp" placeholder="Masukkan No KTP" id="ktp"
                                                       oninvalid="this.setCustomValidity('Silahkan Masukkan Nomor KTP Anda')"
                                                         accept=""oninput="this.setCustomValidity('')" required="require">
 
@@ -73,8 +74,8 @@
                             </div>
 
                             <label>Jenis Kelamin : </label>
-                            <label class="radio-inline"><input type="radio" name="jk" id="L"> Laki-laki </label>
-                            <label class="radio-inline"><input type="radio" name="jk" id="P"> Perempuan </label>
+                            <label class="radio-inline"><input type="radio" name="jk" id="jk" value="L"> Laki-laki </label>
+                            <label class="radio-inline"><input type="radio" name="jk" id="jk" value="P"> Perempuan </label>
                             <br>
                             <div class="center">
                                 <input type="button" name="update" id="update" ktp="" class="btn-mod btn-submit" value="Update / Submit">
@@ -194,18 +195,11 @@ $(document).ready(function(){
                     html += '<td>'+data[count].ktp+'</td>';
                     //html += '<td><button id="soak">SOAK</button></td>';
                     html += '<td>';
-                    
                     if(data[count].verifikasi == 0){
-                        html += '<form action="#" method="post" class="pull-left">\n\
-                                    <input type="hidden" name="ktp" value="'+data[count].ktp+'" readonly>\n\
-                                    <input type="button" name="ver" id="ver" value="Verifikasi" class="btn btn-info">\n\
-                                </form>';
+                        html += '<input type="button" name="ver" id="ver" ktp="'+data[count].ktp+'" email="'+data[count].email+'" tlp="'+data[count].tlp+'"value="Verifikasi" class="btn btn-info pull-left">';
                     }
                     else{
-                        html += '<form action="#" method="post" class="pull-left">\n\
-                                    <input type="hidden" name="ktp" value="'+data[count].ktp+'" readonly>\n\
-                                    <input type="button" name="un-ver" id="un-ver" value="Un-Verifikasi" class="btn btn-danger">\n\
-                                </form>';
+                        html += '<input type="button" name="ver" id="ver" ktp="'+data[count].email+'" email="'+data[count].email+'" tlp="'+data[count].tlp+'"value="Verif Lagi" class="btn btn-danger pull-left">';
                     }
                     
                     var date = new Date(data[count].tgl);
@@ -213,7 +207,7 @@ $(document).ready(function(){
                     var bulan = date.getMonth() + 1;
                     var tahun = date.getFullYear();
                                     
-                    html += '<input type="button" data-toggle="modal" data-target="#peserta_modal" ktp="'+data[count].ktp+'" \n\
+                    html += '<input type="button" data-toggle="modal" data-target="#peserta_modal" id_s="'+data[count].id+'" ktp="'+data[count].ktp+'" \n\
                                 nama="'+data[count].nama+'" tlp="'+data[count].tlp+'" email="'+data[count].email+'" tgl="'+data[count].tgl+'"\n\
                                 hari="'+hari+'" bulan="'+bulan+'" tahun="'+tahun+'" jk="'+data[count].jk+'"\n\
                                 id="edit_peserta" name="edit_peserta" class="btn btn-primary pull-left" style="margin-left:10px;" \n\
@@ -269,9 +263,9 @@ $(document).ready(function(){
         var tlp = $(this).attr("tlp");
         var email = $(this).attr("email");
         var jk = $(this).attr("jk");
+        var id = $(this).attr("id_s");
         
         //TANGGAL
-        
         var hari = $(this).attr("hari");
         var bulan = $(this).attr("bulan");
         var tahun = $(this).attr("tahun");
@@ -286,25 +280,37 @@ $(document).ready(function(){
         $('#hari').val(hari);
         $('#bulan').val(bulan);
         $('#tahun').val(tahun);
+        $('#id').val(id);
         $('#hapus').attr("ktp",ktp);
         
         if(jk === "L"){
-            $('#L').attr('checked', 'checked');
+            $("#jk[value='L']").attr('checked', 'checked');
         }
         else{
-            $('#P').attr('checked', 'checked');
+            $("#jk[value='P']").attr('checked', 'checked');
         }
             
     })
     
     //FUNGSI VERIFIKASI
     $(document).on('click', '#ver', function(){
-        alert("jhasdwd");
-    })
-    
-    //FUNGSI VERIFIKASI
-    $(document).on('click', '#un-ver', function(){
-        alert("jhasdwd");
+        var ktp = $(this).attr("ktp");
+        var email = $(this).attr("email");
+        var tlp = $(this).attr("tlp");
+        var page = $('#bp2').attr('data-id');
+        $.ajax({
+            url:"pelanggan_opr.php",
+            method:"POST",
+            data:{
+                'ktp':ktp,
+                'email':email,
+                'tlp':tlp,
+                'key':'ver'
+            },
+            success:function(data){
+                fetch_data_pelanggan(page-1);
+            }
+        });
     })
     
     //FUNGSI UPDATE PELANGGAN
@@ -313,16 +319,19 @@ $(document).ready(function(){
         serialize.push({name: 'key', value: 'update'});
         var page = $('#bp2').attr('data-id');
         $.ajax({
-              url:"pelanggan_opr.php",
-              method:"POST",
-              data:$.param(serialize),
-              success:function(data){
-                  //$('#peserta_modal').modal('toggle');
-                  //fetch_data_pelanggan(page-1);
-                  
-                  alert(data);
-              }
-          });
+            url:"pelanggan_opr.php",
+            method:"POST",
+            data:$.param(serialize),
+            success:function(data){
+                if(data.status == 'sukses'){
+                    $('#peserta_modal').modal('toggle');
+                    fetch_data_pelanggan(page-1);
+                }
+                else if(data.status == 'gagal'){
+                    alert("Maaf data KTP yang anda inputkan sudah ada, silahlan coba lagi");
+                }
+            }
+        });
     })
     
     //FUNGSI HAPUS PELANGGAN
@@ -333,7 +342,7 @@ $(document).ready(function(){
         var ktp = $(this).attr('ktp');
         var page = $('#bp2').attr('data-id');
         if(submit == "YAKIN"){
-          $.ajax({
+            $.ajax({
                 url:"pelanggan_opr.php",
                 method:"POST",
                 data : {
@@ -350,9 +359,6 @@ $(document).ready(function(){
           //alert("Penghapusal Batal");
         }
     })
-    
-    
-    
     
 })
 </script>

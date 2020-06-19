@@ -1,6 +1,9 @@
 <?php
-    $date = 1999-02-01;
-    
-    $timestamp = strtotime($date);
-    echo date("d", $timestamp);
+    $email = "";
+    if($email !== ''){
+        echo "email ada";
+    }
+    else{
+        echo "email tidak ada";
+    }
 ?>

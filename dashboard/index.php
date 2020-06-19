@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="body"> <!-- format untuk body atau konten -->
-            <a href="form_pendaftaran.php">Form Pendaftaran</a>
+            <a href="pelanggan.php">Form Pendaftaran</a>
         </div>
     </body>
 </html>
