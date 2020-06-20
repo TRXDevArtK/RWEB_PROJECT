@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2020 at 01:00 PM
+-- Generation Time: Jun 20, 2020 at 01:34 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -55,6 +55,27 @@ CREATE TABLE `artikel` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dokter`
+--
+
+CREATE TABLE `dokter` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(75) NOT NULL,
+  `klinik` varchar(50) NOT NULL,
+  `jam_khusus` varchar(30) NOT NULL,
+  `hari` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `dokter`
+--
+
+INSERT INTO `dokter` (`id`, `nama`, `klinik`, `jam_khusus`, `hari`) VALUES
+(11223, 'Ali Usman', 'Kandungan & Kebidanan', '', 'Senin');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pelanggan`
 --
 
@@ -91,6 +112,12 @@ ALTER TABLE `agenda`
 -- Indexes for table `artikel`
 --
 ALTER TABLE `artikel`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `dokter`
+--
+ALTER TABLE `dokter`
   ADD PRIMARY KEY (`id`);
 
 --
