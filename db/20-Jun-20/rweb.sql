@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2020 at 01:34 PM
+-- Generation Time: Jun 20, 2020 at 01:54 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -98,6 +98,19 @@ INSERT INTO `pelanggan` (`ktp`, `id`, `nama`, `jk`, `tgl`, `tlp`, `email`, `veri
 (112244, 23523, 'aku adalah6666666a', 'L', '1999-02-01', 12314242, 'asd', 1),
 (112255, 1122334455, 'Aji Gelar', 'L', '1999-08-07', 85268043433, 'refaldi1700018013@webmail.uad.ac.ie', 1);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(130) NOT NULL,
+  `password` varchar(130) NOT NULL,
+  `email` int(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indexes for dumped tables
 --
@@ -125,6 +138,12 @@ ALTER TABLE `dokter`
 --
 ALTER TABLE `pelanggan`
   ADD PRIMARY KEY (`ktp`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
