@@ -34,6 +34,8 @@ $routes->get('/', 'Home::index');
 $routes->get('/', 'Daftar::daftar');
 $routes->get('/', 'Agenda::agenda');
 $routes->get('/', 'Kontak::kontak');
+$routes->get('dashboard/', 'Dashboard\Dashboard::index');
+$routes->get('dashboard/', 'Dashboard\Pelanggan::index');
 // Routes untuk database
 $routes->resource('pelanggan');
 
