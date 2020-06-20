@@ -38,6 +38,7 @@ $routes->get('dashboard/', 'Dashboard\Dashboard::index');
 $routes->get('dashboard/', 'Dashboard\Pelanggan::index');
 // Routes untuk database
 $routes->resource('pelanggan');
+$routes->resource('dokter');
 
 /**
  * --------------------------------------------------------------------

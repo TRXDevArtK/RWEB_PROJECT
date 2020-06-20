@@ -67,4 +67,31 @@ class Validation
 		// ]
 	];
 	//--------------------------------------------------------------------
+	// Validasi Dokter
+	public $dokter = [
+        'id'           => 'required',
+        'nama'         => 'required',
+        'klinik'       => 'required',
+        'jam_khusus'   => 'required',
+        'hari'         => 'required'
+	];
+	 
+	public $dokter_errors = [
+		'id'=> [
+			'required'  => 'ID wajib diisi.'
+		],
+		'nama'=> [
+			'required'  => 'Nama wajib diisi.'
+		],
+		'klinik'=> [
+			'required'  => 'Klinik wajib diisi.'
+		],
+		'jam_khusus'=> [
+			'required'  => 'Jam Khusus wajib diisi.'
+		],
+		'hari'=> [
+			'required'  => 'Hari wajib diisi.'
+		]
+	];
+	//--------------------------------------------------------------------
 }
