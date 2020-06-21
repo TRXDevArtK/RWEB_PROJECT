@@ -23,8 +23,8 @@ class Pelanggan extends Controller
 
 	public function create()
 	{
-		echo 'Hallo Dunia!' ;
-    	//return view('dashboard/pelanggan/create');
+		//echo 'Hallo Dunia!' ;
+    	return view('dashboard/pelanggan/create');
 	}
 
 	public function store()
