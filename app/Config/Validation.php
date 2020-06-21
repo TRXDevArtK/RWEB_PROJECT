@@ -94,7 +94,7 @@ class Validation
 	public $users = [
         'username' => 'required',
         'password' => 'required',
-        'email'    => 'required|valid_email'
+        'email'    => 'required'
 	];
 	 
 	public $users_errors = [

@@ -47,7 +47,7 @@ class Users extends ResourceController
         }
     }
     }
-    
+
     public function show($id = NULL)
     { 
         $get = $this->model->getUsers($id);
@@ -79,6 +79,56 @@ class Users extends ResourceController
                 'status' => $code,
                 'error' => false,
                 'data' => $get,
+            ];
+        } else {
+            $code = 401;
+            $msg = ['message' => 'Not Found'];
+            $response = [
+                'status' => $code,
+                'error' => true,
+                'data' => $msg,
+            ];
+        }
+        return $this->respond($response, $code);
+    }
+
+    public function update($id = NULL)
+    {
+        $validation =  \Config\Services::validation();
+
+        $data = $this->request->getRawInput();
+
+        if($validation->run($data, 'users') == FALSE){
+            $response = [
+                'status' => 500,
+                'error' => true,
+                'data' => $validation->getErrors(),
+            ];
+            return $this->respond($response, 500);
+        } else {
+            $simpan = $this->model->updateUsers($data,$id);
+            if($simpan){
+                $msg = ['message' => 'Updated User successfully'];
+                $response = [
+                    'status' => 200,
+                    'error' => false,
+                    'data' => $msg,
+                ];
+                return $this->respond($response, 200);
+            }
+        }
+    }
+
+    public function delete($id = NULL)
+    {
+        $hapus = $this->model->deleteUsers($id);
+        if($hapus){
+            $code = 200;
+            $msg = ['message' => 'Deleted user successfully'];
+            $response = [
+                'status' => $code,
+                'error' => false,
+                'data' => $msg,
             ];
         } else {
             $code = 401;
