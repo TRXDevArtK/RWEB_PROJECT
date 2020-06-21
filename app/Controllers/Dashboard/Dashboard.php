@@ -7,10 +7,6 @@ class Dashboard extends BaseController
 	{
 		return view('dashboard\index');
 	}
-	public function view()
-	{
-		return view('dashbard\pelanggan');
-	}
 	//--------------------------------------------------------------------
 
 }

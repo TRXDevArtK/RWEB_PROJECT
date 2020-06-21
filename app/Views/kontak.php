@@ -7,9 +7,9 @@
         <!--Metadata-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/settings.css" />
-        <link rel="stylesheet" href="css/kontak.css" />
-        <script src="js/jquery.min.js"></script>  
+        <link rel="stylesheet" href="public/css/settings.css" />
+        <link rel="stylesheet" href="public/css/kontak.css" />
+        <script src="public/js/jquery.min.js"></script>  
         <title></title>
     </head>
     <body>
