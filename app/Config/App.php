@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost/rweb_project';
+	public $baseURL = 'http://localhost/rweb_project/';
 
 	/*
 	|--------------------------------------------------------------------------
