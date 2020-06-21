@@ -16,20 +16,18 @@ class Users extends ResourceController
     {
     $validation =  \Config\Services::validation();
  
-    $id         = $this->request->getPost('id');
     $username   = $this->request->getPost('username');
     $password   = $this->request->getPost('password');
     $email      = $this->request->getPost('email');
 
 
     $data = [
-        'id'       => $id,
         'username' => $username,
         'password' => $password,
-        'email'    => $email,
+        'email'    => $email
     ];
      
-    if($validation->run($data, 'Users') == FALSE){
+    if($validation->run($data, 'users') == FALSE){
         $response = [
             'status' => 500,
             'error'  => true,
@@ -39,7 +37,7 @@ class Users extends ResourceController
     } else {
         $simpan = $this->model->insertUsers($data);
         if($simpan){
-            $msg = ['message' => 'Created Users successfully'];
+            $msg = ['message' => 'Created User successfully'];
             $response = [
                 'status' => 200,
                 'error' => false,
@@ -48,5 +46,49 @@ class Users extends ResourceController
             return $this->respond($response, 200);
         }
     }
+    }
+    
+    public function show($id = NULL)
+    { 
+        $get = $this->model->getUsers($id);
+        if($get){
+            $code = 200;
+            $response = [
+                'status' => $code,
+                'error' => false,
+                'data' => $get,
+            ];
+        } else {
+            $code = 401;
+            $msg = ['message' => 'Not Found'];
+            $response = [
+                'status' => $code,
+                'error' => true,
+                'data' => $msg,
+            ];
+        }
+        return $this->respond($response, $code);
+    }
+ 
+    public function edit($id = NULL)
+    {
+        $get = $this->model->getUsers($id);
+        if($get){
+            $code = 200;
+            $response = [
+                'status' => $code,
+                'error' => false,
+                'data' => $get,
+            ];
+        } else {
+            $code = 401;
+            $msg = ['message' => 'Not Found'];
+            $response = [
+                'status' => $code,
+                'error' => true,
+                'data' => $msg,
+            ];
+        }
+        return $this->respond($response, $code);
     }
 }
