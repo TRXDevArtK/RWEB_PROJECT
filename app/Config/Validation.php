@@ -42,7 +42,7 @@ class Validation
 		'email'			=> 'required',
 		'verifikasi'	=> ''
 	];
-	 
+		 
 	public $pelanggan_errors = [
 		'ktp'=> [
 			'required'  => 'KTP wajib diisi.'
@@ -91,6 +91,29 @@ class Validation
 		],
 		'hari'=> [
 			'required'  => 'Hari wajib diisi.'
+		]
+	];
+	//--------------------------------------------------------------------
+	// Validasi Users
+	public $users = [
+        'id'       => 'required',
+        'username' => 'required',
+        'password' => 'required',
+        'email'    => 'required'
+	];
+	 
+	public $users_errors = [
+		'id'=> [
+			'required'  => 'ID wajib diisi.'
+		],
+		'username'=> [
+			'required'  => 'Username wajib diisi.'
+		],
+		'password'=> [
+			'required'  => 'Password wajib diisi.'
+		],
+		'email'=> [
+			'required'  => 'Email Khusus wajib diisi.'
 		]
 	];
 	//--------------------------------------------------------------------

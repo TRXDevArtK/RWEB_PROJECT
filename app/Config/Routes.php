@@ -31,14 +31,15 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/', 'Daftar::daftar');
-$routes->get('/', 'Agenda::agenda');
-$routes->get('/', 'Kontak::kontak');
-$routes->get('dashboard/', 'Dashboard\Dashboard::index');
-$routes->get('dashboard/', 'Dashboard\Pelanggan::index');
+$routes->get('/', 'Daftar::index');
+$routes->get('/', 'Agenda::index');
+$routes->get('/', 'Kontak::index');
+$routes->get('dashboard', 'Dashboard\Dashboard::index');
+$routes->get('dashboard', 'Dashboard\Dashboard::pelanggan');
 // Routes untuk database
 $routes->resource('pelanggan');
 $routes->resource('dokter');
+$routes->resource('users');
 
 /**
  * --------------------------------------------------------------------

@@ -1,4 +1,4 @@
-<?php namespace App\Controllers\Dashboard;
+<?php  namespace App\Controllers\Dashboard;
 use App\Controllers\BaseController;
 
 class Pelanggan extends BaseController
