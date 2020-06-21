@@ -7,11 +7,10 @@ class Dashboard extends BaseController
 	{
 		return view('dashboard\index');
 	}
-	// public function pelanggan()
-	// {
-	// 	return view('dashboard\pelanggan');
-	// }
-
+	public function view()
+	{
+		return view('dashbard\pelanggan');
+	}
 	//--------------------------------------------------------------------
 
 }

@@ -1,5 +1,5 @@
 <?php
-    include('auth_database.php');
+//   include('auth_database.php');
 
     //LOAD LIST PELANGGAN
     if(isset($_POST['key']) && $_POST['key'] == 'load'){

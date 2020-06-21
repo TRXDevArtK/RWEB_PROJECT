@@ -20,7 +20,7 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);
 
 /**
  * --------------------------------------------------------------------
@@ -31,11 +31,11 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/', 'Daftar::index');
-$routes->get('/', 'Agenda::index');
-$routes->get('/', 'Kontak::index');
+$routes->get('daftar', 'Daftar::index');
+$routes->get('agenda', 'Agenda::index');
+$routes->get('kontak', 'Kontak::index');
 $routes->get('dashboard', 'Dashboard\Dashboard::index');
-$routes->get('dashboard', 'Dashboard\Dashboard::pelanggan');
+$routes->get('dashboard\pelanggan', 'Dashboard::pelanggan');
 // Routes untuk database
 $routes->resource('pelanggan');
 $routes->resource('dokter');
