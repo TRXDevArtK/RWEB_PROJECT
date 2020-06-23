@@ -9,7 +9,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="public/css/settings.css" />
         <link rel="stylesheet" href="public/css/kontak.css" />
+        <link rel="stylesheet" href="public/css/bootstrap.min.css" />
         <script src="public/js/jquery.min.js"></script>  
+        <script src="public/js/bootstrap.min.js"></script>
         <title></title>
     </head>
     <body>
@@ -19,13 +21,13 @@
         
         <div class="sub-nav-header center">
             <hr>
-            <button type="button" class="btn btn-sub-nav" data-toggle="collapse" data-target="#knp">Kesan Dan Pesan</button>
-            <button type="button" class="btn btn-sub-nav" data-toggle="collapse" data-target="#info">Info Kami</button>
+            <button type="button" class="btn-mod btn-sub-nav clp1" >Kesan Dan Pesan</button>
+            <button type="button" class="btn-mod btn-sub-nav clp2" >Info Kami</button>
         </div>
         
         <div class="body">
             <!-- ganti in nanti dengan jquery peraktif collapse -->
-            <div id="knp" class="collapse">
+            <div id="knp" class="collapse in">
                 <h4>Kesan dan Pesan</h4>
                 <p>Ada kesan, pesan, kritikan dan saran anda tentang pelayanan di RSUD Kota Yogyakarta dapat anda sampaikan disini</p>
                 <p>Kesan, pesan, kritikan dan saran anda akan mnenjadi bagian dari peningkatan pelayanan kami</p>
@@ -60,7 +62,7 @@
                 </form>
             </div>
 
-            <div id="info" class="collapse in text-center">
+            <div id="info" class="collapse text-center">
                 <h4>Hubungi Kami</h4>
                 <p>Hotline SMS Pengaduan</p><br>
                 <p>No. Telp (Dengan Handphone) :</p>
@@ -77,19 +79,15 @@
 </html>
 
 <script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
+$(document).ready(function(){
+    $('.clp1').on('click', function() {
+        $("#knp").collapse('show');
+        $("#info").collapse('hide');
+    });
+    $('.clp2').on('click', function() {
+        $("#info").collapse('show');
+        $("#knp").collapse('hide');
+    });
+})
 </script>
 
