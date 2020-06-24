@@ -20,7 +20,7 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);
 
 /**
  * --------------------------------------------------------------------
@@ -30,16 +30,25 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+//Halaman Utama dan Navigasi
 $routes->get('/', 'Home::index');
-$routes->get('/', 'Daftar::index');
-$routes->get('/', 'Agenda::index');
-$routes->get('/', 'Kontak::index');
+$routes->get('daftar', 'Daftar::index');
+$routes->get('agenda', 'Agenda::index');
+$routes->get('kontak', 'Kontak::index');
+$routes->get('login', 'Login::index');
+
+//Dashboards
 $routes->group('dashboard', function($routes)
 {
-	$routes->add('/', 'Dashboard\Dashboard::index');
-	$routes->add('pelanggan', 'Dashboard\Pelanggan::index');
-	$routes->add('pelanggan/create', 'Dashboard\Pelanggan::create');
+    $routes->get('/', 'Dashboard\Dashboard::index');
+    $routes->get('pelanggan', 'Dashboard\Pelanggan::index');
+    $routes->get('pelanggan_opr', 'Dashboard\Pelanggan::index');
+    $routes->get('agenda', 'Dashboard\agenda::index');
+    $routes->get('artikel', 'Dashboard\artikel::index');
+    $routes->get('dokter', 'Dashboard\dokter::index');
 });
+
 // Routes untuk database
 $routes->resource('pelanggan');
 $routes->resource('dokter');

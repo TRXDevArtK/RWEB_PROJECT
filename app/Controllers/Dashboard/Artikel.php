@@ -1,9 +1,9 @@
 <?php namespace App\Controllers;
 
-class Daftar extends BaseController
+class Artikel extends BaseController
 {
     public function index()
     {
-            return view('daftar');
+            return view('artikel');
     }
 }

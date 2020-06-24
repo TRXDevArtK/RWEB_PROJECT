@@ -2,11 +2,11 @@
 
 class Home extends BaseController
 {
-	public function index()
-	{
-		return view('home_rsjogja');
-	}
+    public function index()
+    {
+            return view('home_rsjogja');
+    }
 
-	//--------------------------------------------------------------------
+    //--------------------------------------------------------------------
 
 }
