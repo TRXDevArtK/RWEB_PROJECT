@@ -1,41 +1,3 @@
-<?php
-    ob_start();
-    include_once 'database.php';
-    
-    if(isset($_POST['submit'])){
-        $nama = $_POST['nama'];
-        $id = mt_rand(1000000000, 2100000000);
-        
-        //TGL
-        $hari = $_POST['hari'];
-        $bulan = $_POST['bulan'];
-        $tahun = $_POST['tahun'];
-        
-        $tgl = $tahun."-".$bulan."-".$hari;
-        
-        $tlp = $_POST['tlp'];
-        if(!empty($_POST['email'])){
-            $email = $_POST['email'];
-        }
-        else{
-            $email = '';
-        }
-        
-        $noktp = $_POST['noktp'];
-        $jk = $_POST['jk'];
-        $verifikasi = 0;
-        
-        $warning = 0;
-        $query = "INSERT INTO `pelanggan` (`ktp`, `id`, `nama`, `jk`, `tgl`, `tlp`, `email`, `verifikasi`) VALUES ('$noktp', '$id', $nama', '$jk', $tgl', '$tlp', '$email', '$verifikasi')";
-        $sql_run = mysqli_query($conn, $query);
-        if($sql_run){
-            header("location:daftar.php");
-            exit();
-        }
-        
-    }
-?>
-
 <html>
     <head>
         <!--Metadata-->
@@ -49,9 +11,6 @@
         <title></title>
     </head>
     <body>
-        <div class="header">
-            <?php include 'nav.php'; ?>
-        </div>
         <div class="body">
             <div class="page-header center">
                 <h3>Pendaftaran Online</h3>
@@ -59,7 +18,7 @@
                 <p>Jika data diri sudah dikonfirmasi, kami akan mengirim konfirmasi ke email atau nomor telepon anda</p>
             </div>
               
-            <form action="#" method="post">
+            <form action="http://localhost/RWEB_PROJECT/daftar" method="post">
                 
                 <input type="text" name="nama" placeholder="Masukkan Nama" 
                                           oninvalid="this.setCustomValidity('Silahkan Masukkan Nama Anda')"

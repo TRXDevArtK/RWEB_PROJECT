@@ -2,8 +2,9 @@
 
 class Kontak extends BaseController
 {
-	public function index()
-	{
-		return view('kontak');
-	}
+    public function index()
+    {
+        echo view('nav');
+        echo view('kontak');
+    }
 }

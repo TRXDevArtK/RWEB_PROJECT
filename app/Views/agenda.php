@@ -13,9 +13,6 @@
         <title></title>
     </head>
     <body>
-        <div class="header">
-            <?php include 'nav.php'; ?>
-        </div>
         <div class="agenda-header">
             <hr class="hr_line">
             <p>List Agenda</p>

@@ -32,8 +32,9 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 
 //Halaman Utama dan Navigasi
+//Catatan : untuk form, jangan pake GET , pake add
 $routes->get('/', 'Home::index');
-$routes->get('daftar', 'Daftar::index');
+$routes->add('daftar', 'Daftar::index');
 $routes->get('agenda', 'Agenda::index');
 $routes->get('kontak', 'Kontak::index');
 $routes->get('login', 'Login::index');

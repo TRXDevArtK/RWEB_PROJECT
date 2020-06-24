@@ -15,10 +15,6 @@
         <title></title>
     </head>
     <body>
-        <div class="header">
-            <?php include 'nav.php'; ?>
-        </div>
-        
         <div class="sub-nav-header center">
             <hr>
             <button type="button" class="btn-mod btn-sub-nav clp1" >Kesan Dan Pesan</button>

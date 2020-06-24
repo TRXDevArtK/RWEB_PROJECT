@@ -5,18 +5,9 @@ class Pelanggan_model extends Model
 {
     protected $table = "pelanggan";
 
-    public function getPelanggan($id = false)
+    public function get_pelanggan($id = false)
     {
-        if($id === false){
-            return $this->table('pelanggan')
-                        ->get()
-                        ->getResultArray();
-        } else {
-            return $this->table('pelanggan')
-                        ->where('id', $id)
-                        ->get()
-                        ->getRowArray();
-        }   
+        
     } 
 
     public function insert_pelanggan($data)

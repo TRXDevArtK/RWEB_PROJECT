@@ -1,4 +1,7 @@
 .menu {
+    font-size: 0.8rem;
+    font-size: 13px;
+    margin-bottom: 2.5%;
     position: relative;
     display: flex;
     text-align: center;

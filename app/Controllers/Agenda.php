@@ -2,8 +2,9 @@
 
 class Agenda extends BaseController
 {
-	public function index()
-	{
-		return view('agenda');
-	}
+    public function index()
+    {
+        echo view('nav');
+        echo view('agenda');
+    }
 }

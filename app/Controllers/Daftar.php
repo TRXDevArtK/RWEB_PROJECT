@@ -4,6 +4,10 @@ class Daftar extends BaseController
 {
     public function index()
     {
-            return view('daftar');
+        if(isset($_POST['submit'])){
+            helper('form');
+        }
+        echo view('nav');
+        echo view('daftar',$data);
     }
 }
