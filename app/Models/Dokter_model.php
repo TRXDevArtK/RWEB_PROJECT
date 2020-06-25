@@ -1,5 +1,5 @@
 <?php namespace App\Models;
- use CodeIgniter\Model;
+use CodeIgniter\Model;
  
 class Dokter_model extends Model
 {

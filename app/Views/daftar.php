@@ -20,21 +20,21 @@
               
             <form action="http://localhost/RWEB_PROJECT/daftar" method="post">
                 
-                <input type="text" name="nama" placeholder="Masukkan Nama" 
+                <input type="text" name="nama" placeholder="Masukkan Nama" maxlength="40" size="40"
                                           oninvalid="this.setCustomValidity('Silahkan Masukkan Nama Anda')"
                                             accept=""oninput="this.setCustomValidity('')" required="require">
                 
-                <input type="number" name="tlp" placeholder="Masukkan Nomor Handphone (Dalam Angka)" 
+                <input type="number" name="tlp" placeholder="Masukkan Nomor Handphone (Dalam Angka)" maxlength="13" size="13"
                                           oninvalid="this.setCustomValidity('Silahkan Masukkan Nomor Handphone')"
                                             accept=""oninput="this.setCustomValidity('')" required="require">
                 
-                <input type="text" name="email" placeholder="Masukkan Email (Optional)" 
+                <input type="text" name="email" placeholder="Masukkan Email (Optional)" maxlength="254" size="254"
                                           oninvalid="this.setCustomValidity('Silahkan Masukkan Email Anda')"
                                             accept=""oninput="this.setCustomValidity('')">
                 
-                <input type="number" name="noktp" placeholder="Masukkan No KTP" 
+                <input type="number" name="ktp" placeholder="Masukkan No KTP"
                                           oninvalid="this.setCustomValidity('Silahkan Masukkan Nomor KTP Anda')"
-                                            accept=""oninput="this.setCustomValidity('')" required="require">
+                                            accept=""oninput="this.setCustomValidity('')" required="require" maxlength="20">
                 
                 <div class="input-date">
                     <label>Tanggal Lahir |</label>
@@ -52,8 +52,8 @@
                 </div>
                 
                 <label>Jenis Kelamin : </label>
-                <label class="radio-inline"><input type="radio" name="jk" checked> Laki-laki </label>
-                <label class="radio-inline"><input type="radio" name="jk"> Perempuan </label>
+                <label class="radio-inline"><input type="radio" name="jk" checked value="L"> Laki-laki </label>
+                <label class="radio-inline"><input type="radio" name="jk" value="P"> Perempuan </label>
                 <br>
                 <div class="center">
                     <input type="submit" name="submit" class="btn btn-submit" value="Kirimkan / Submit">
