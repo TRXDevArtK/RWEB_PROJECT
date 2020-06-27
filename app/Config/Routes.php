@@ -32,18 +32,18 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 
 //Halaman Utama dan Navigasi
-//Catatan : untuk form, jangan pake GET , pake add
+//Catatan : untuk form, ajax dan pemanggilan self php, jangan pake GET , pake add
 $routes->get('/', 'Home::index');
 $routes->add('daftar', 'Daftar::index');
 $routes->get('agenda', 'Agenda::index');
 $routes->get('kontak', 'Kontak::index');
-$routes->get('login', 'Login::index');
+$routes->add('login', 'Login::index');
 
 //Dashboards
 $routes->group('dashboard', function($routes)
 {
     $routes->get('/', 'Dashboard\Dashboard::index');
-    $routes->get('pelanggan', 'Dashboard\Pelanggan::index');
+    $routes->add('pelanggan', 'Dashboard\Pelanggan::index');
     $routes->get('pelanggan_opr', 'Dashboard\Pelanggan::index');
     $routes->get('agenda', 'Dashboard\agenda::index');
     $routes->get('artikel', 'Dashboard\artikel::index');

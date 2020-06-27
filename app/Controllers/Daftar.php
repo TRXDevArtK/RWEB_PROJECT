@@ -8,12 +8,12 @@ class Daftar extends BaseController
         $request = \Config\Services::request();
         
         if(isset($_POST['submit'])){
-            $data = "bjashdwd";
             $pelanggan = new \App\Models\Pelanggan_model;
             //jng pake $this . . .
             //Kirim ke model postnya
             $pelanggan->insert_pelanggan($request->getPost());
             //kalau mau cek error, cukup echokan ini
+            //echo $this->db->error();
             //echo $pelanggan->insert_pelanggan($_POST);
         }
         

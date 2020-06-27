@@ -5,38 +5,57 @@ class Pelanggan_model extends Model
 {
     protected $table = "pelanggan";
 
-    public function get_pelanggan($id = false)
+    public function get_pelanggan($post)
     {
+        $limit = $post['limit'];
+        if (isset($data['page'])){ 
+            $page  = $post['page']; 
+        } 
+        else{ 
+            $page=1; 
+        }  
+
+        $start_from = ($page-1) * $limit;  
         
+        $db      = \Config\Database::connect();
+        $builder = $db->table('pelanggan');
+        $query   = $builder->get($limit, $start_from);
+        
+        foreach($query->getResult() as $row)
+        {
+            $data[] = $row;
+        }
+
+        return json_encode($data);
     } 
 
-    public function insert_pelanggan($data)
+    public function insert_pelanggan($post)
     {
         //TGL
-        $hari = $data['hari'];
-        $bulan = $data['bulan'];
-        $tahun = $data['tahun'];
+        $hari = $post['hari'];
+        $bulan = $post['bulan'];
+        $tahun = $post['tahun'];
         
         $id = mt_rand(1000000000, 2100000000);
         
         $tgl = $tahun."-".$bulan."-".$hari;
         
         //EMAIL
-        if(!empty($data['email'])){
-            $email = $data['email'];
+        if(!empty($post['email'])){
+            $email = $post['email'];
         }
         else{
             $email;
         }
         
         //susun arraynya kalau mau otomatis
-        $data = [
-            'ktp' => $data['ktp'],
+        $post = [
+            'ktp' => $post['ktp'],
             'id'  => $id,
-            'nama' => $data['nama'],
-            'jk'  => $data['jk'],
+            'nama' => $post['nama'],
+            'jk'  => $post['jk'],
             'tgl'  => $tgl,
-            'tlp'  => $data['tlp'],
+            'tlp'  => $post['tlp'],
             'email'  => $email,
             'verifikasi'  => '0'
         ];
@@ -44,7 +63,7 @@ class Pelanggan_model extends Model
         $db      = \Config\Database::connect();
         $builder = $db->table("pelanggan");
         
-        if($builder->insert($data)){
+        if($builder->insert($post)){
             return redirect($_SERVER['REQUEST_URI'], 'refresh');
         }
         else{

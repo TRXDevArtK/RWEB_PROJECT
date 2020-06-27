@@ -1,5 +1,4 @@
 <?php
-    //echo $total_records;
 ?>
 
 <html>
@@ -160,7 +159,7 @@ $(document).ready(function(){
             id = 1;
         }
         $.ajax({
-            url:"dashboard/pelanggan_opr",
+            url:"pelanggan",
             method:"POST",
             data:{
                 'limit':'<?=$limit?>',
@@ -214,7 +213,6 @@ $(document).ready(function(){
                 $(".pageitem").removeClass("active");
                 $("#"+id).addClass("active");
                 //$('abody').html(html);
-                
             }
         });
     }
