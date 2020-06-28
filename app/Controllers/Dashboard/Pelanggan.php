@@ -6,6 +6,10 @@ class Pelanggan extends Controller
 {
     public function index()
     {
+        //CEK LOGIN
+        helper('auth');
+        check_login();
+        
         //FUNGSI UMUM
         //
         //Fungsi ambil post/get/dll , JANGAN LUPA!

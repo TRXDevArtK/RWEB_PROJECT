@@ -35,14 +35,14 @@ $routes->setAutoRoute(false);
 //Catatan : untuk form, ajax dan pemanggilan self php, jangan pake GET , pake add
 $routes->get('/', 'Home::index');
 $routes->add('daftar', 'Daftar::index');
-$routes->get('agenda', 'Agenda::index');
-$routes->get('kontak', 'Kontak::index');
+$routes->add('agenda', 'Agenda::index');
+$routes->add('kontak', 'Kontak::index');
 $routes->add('login', 'Login::index');
 
 //Dashboards
 $routes->group('dashboard', function($routes)
 {
-    $routes->get('/', 'Dashboard\Dashboard::index');
+    $routes->add('/', 'Dashboard\Dashboard::index');
     $routes->add('pelanggan', 'Dashboard\Pelanggan::index');
     $routes->get('pelanggan_opr', 'Dashboard\Pelanggan::index');
     $routes->get('agenda', 'Dashboard\agenda::index');

@@ -15,6 +15,9 @@
     <body>
         <div class="body"> <!-- format untuk body atau konten -->
             <a href="dashboard/pelanggan">Form Pendaftaran</a>
+            <form action="dashboard" method="post">
+                <input name=destroy type="submit" value="LOGOUT">
+            </form>
         </div>
     </body>
 </html>

@@ -5,7 +5,7 @@ class Auth_model extends Model {
     
     public function get_login($post){
         //Fungsi session, kemungkinan sama seperti $_SESSION
-        //$session = \Config\Services::session($config);
+        $session = session();
         
         $username = $post['username'];
         $password = $post['password'];
@@ -34,13 +34,11 @@ class Auth_model extends Model {
             else{
                 $_SESSION['expire'] = $_SESSION['start'] + (180 * 60);
             }
-            
-            //MASALAH : FOLDER RWEB_PROJECT ubah ke huruf kecil
-            return redirect()->to(base_url().'/dashboard');
+            return true;
         }
         else{
             $_SESSION['loginsalah'] = "Login salah, silahkan coba lagi";  
-            return redirect()->back();
+            return false;
         }
         
         
