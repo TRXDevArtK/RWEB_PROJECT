@@ -6,9 +6,12 @@ class Pelanggan extends Controller
 {
     public function index()
     {
-        //CEK LOGIN
+        //CHECK LOGIN
         helper('auth');
-        check_login();
+        $login = check_login();
+        if($login == 0){
+            return redirect()->to(base_url().'/login');
+        }
         
         //FUNGSI UMUM
         //
