@@ -18,7 +18,7 @@
                 <p>Jika data diri sudah dikonfirmasi, kami akan mengirim konfirmasi ke email atau nomor telepon anda</p>
             </div>
               
-            <form action="http://localhost/RWEB_PROJECT/daftar" method="post">
+            <form action="http://localhost/rweb_project/daftar" method="post">
                 
                 <input type="text" name="nama" placeholder="Masukkan Nama" maxlength="40" size="40"
                                           oninvalid="this.setCustomValidity('Silahkan Masukkan Nama Anda')"

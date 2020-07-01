@@ -1,6 +1,3 @@
-<?php
-?>
-
 <html>
     <head>
         <!--Metadata-->
@@ -159,12 +156,12 @@ $(document).ready(function(){
             id = 1;
         }
         $.ajax({
-            url:"pelanggan",
+            url:"<?= current_url(); ?>",
             method:"POST",
             data:{
                 'limit':'<?=$limit?>',
                 'page':id,
-                'key':'load'
+                'key':'read'
             },
             dataType:"json",
             error: function (xhr, status) {
@@ -286,7 +283,7 @@ $(document).ready(function(){
         var tlp = $(this).attr("tlp");
         var page = $('#bp2').attr('data-id');
         $.ajax({
-            url:"dashboard/pelanggan_opr",
+            url:"<?= current_url(); ?>",
             method:"POST",
             data:{
                 'ktp':ktp,
@@ -306,9 +303,10 @@ $(document).ready(function(){
         serialize.push({name: 'key', value: 'update'});
         var page = $('#bp2').attr('data-id');
         $.ajax({
-            url:"dashboard/pelanggan_opr",
+            url:'<?= current_url(); ?>',
             method:"POST",
             data:$.param(serialize),
+            dataType:"json",
             success:function(data){
                 if(data.status == 'sukses'){
                     $('#peserta_modal').modal('toggle');
@@ -330,7 +328,7 @@ $(document).ready(function(){
         var page = $('#bp2').attr('data-id');
         if(submit == "YAKIN"){
             $.ajax({
-                url:"dashboard/pelanggan_opr",
+                url:'<?= current_url(); ?>',
                 method:"POST",
                 data : {
                     ktp : ktp,

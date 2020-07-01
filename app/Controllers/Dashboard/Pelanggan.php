@@ -19,16 +19,14 @@ class Pelanggan extends Controller
         $request = \Config\Services::request();
         
         //Ambil model
-        //Catatan : ini bisa ngambil di public function jika dibuat
+        //Catatan : ini bisa ngambil di public function (disini) jika dibuat
         //Tapi itu harus enable auto routing . . 
-        if(isset($_POST['key']) && $_POST['key'] == 'load'){
-            //Ambil model
-            //Catatan : ini bisa ngambil di public function jika dibuat
-            //Tapi itu harus enable auto routing . . 
-            $pelanggan = new \App\Models\Pelanggan_model;
-            //jng pake $this . . .
+        $pelanggan = new \App\Models\Pelanggan_model;
+        
+        if(isset($_POST['key']) && $_POST['key'] == 'read'){
+            //jng pake $this . . . (CI 3)
             //Kirim ke model postnya
-            $data = $pelanggan->get_pelanggan($request->getPost());
+            $data = $pelanggan->read_pelanggan($request->getPost());
             
             //Untuk ajax, pengambilan data harus hanya me return hasilnya saja, tidak seluruh page
             //Itulah kita bisa memanggil return, dari pada echo
@@ -37,9 +35,26 @@ class Pelanggan extends Controller
             return $data;
         }
         
-        $model = new \App\Models\Pagination_model;
-        $data = $model->getPagination("pelanggan");
+        if(isset($_POST['key']) && $_POST['key'] == 'update'){
+            //Untuk debug errornya, untuk sekarang, 
+            //coba fungsi di modelnya dipindahin ke controller dan jalanin . ..
+            $data = $pelanggan->update_pelanggan($request->getPost());
+            return $data;
+        }
+        
+        if(isset($_POST['key']) && $_POST['key'] == 'delete'){
+            $data = $pelanggan->delete_pelanggan($request->getPost());
+            return $data;
+        }
+        
+        if(isset($_POST['key']) && $_POST['key'] == 'ver'){
+            $data = $pelanggan->verifikasi_pelanggan($request->getPost());
+            return $data;
+        }
+        
+        $pagination = new \App\Models\Pagination_model;
+        $data = $pagination->getPagination("pelanggan");
 
-        return view('Dashboard/pelanggan', $data);
+        return view('dashboard/pelanggan', $data);
     }
 }

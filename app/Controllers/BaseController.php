@@ -41,9 +41,6 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
-                
-                //Autoload session
-                $session = session();
 	}
 
 }

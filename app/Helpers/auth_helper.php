@@ -2,6 +2,8 @@
     function check_login(){
         //HELPER CEK LOGIN
         //HAPUS INI KALAU MAU DEBUG DI POSTMAN
+        //Autoload session
+        $session = session();
         if(!isset($_SESSION['status']) && !isset($_SESSION['login_id'])){
             //Kalau status gk ada, balik ke index
             return 0;
