@@ -1,83 +1,45 @@
 <?php
-    
-?>
 
-<html>
-    <head>
-        <!--Metadata-->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/settings.css" />
-        <link rel="stylesheet" href="css/index.css" />
-        <script src="js/jquery.min.js"></script>  
-        <title></title>
-    </head>
-    <header><img class="hr_img" src="img/logo.png"></header>
-    <body>
-        <div class="welcome_text">
-            <h3>Selamat Datang</h3>
-            <h4>Di Rumah Sakit Jogja</h4>
-        </div>
-        <div class="pageshow">
-            <a href="daftar.php">
-                <img src="img/kamar1.jpeg" alt="kamar1">
-                <p>INI TEST PAGESHOW</p>
-            </a>
-            <a href="#">
-                <img src="img/kamar1.jpeg" alt="kamar1">
-                <p>INI TEST PAGESHOW</p>
-            </a>
-            <a href="#">
-                <img src="img/kamar1.jpeg" alt="kamar1">
-                <p>INI TEST PAGESHOW</p>
-            </a>
-            <a href="#">
-                <img src="img/kamar1.jpeg" alt="kamar1">
-                <p>INI TEST PAGESHOW</p>
-            </a>
-            <a href="#">
-                <img src="img/kamar1.jpeg" alt="kamar1">
-                <p>INI TEST PAGESHOW</p>
-            </a>
-            <a href="#">
-                <img src="img/kamar1.jpeg" alt="kamar1">
-                <p>INI TEST PAGESHOW</p>
-            </a>
-            <a href="#">
-                <img src="img/kamar1.jpeg" alt="kamar1">
-                <p>INI TEST PAGESHOW</p>
-            </a>
-            <a href="#">
-                <img src="img/kamar1.jpeg" alt="kamar1">
-                <p>INI TEST PAGESHOW</p>
-            </a>
-            
-        </div>
-        <!-- PAGESHOW (END) -->
-        
-        <div class="artikel-header">
-            <hr class="hr_line">
-            <p>Artikel Utama</p>
-        </div>
-        
-        <div class="artikel-body">
-            <a href="#">
-                <img src="img/kamar1.jpeg" alt="kamar1">
-                <p>INI TEST PAGESHOW</p>
-            </a>
-            <a href="#">
-                <img src="img/kamar1.jpeg" alt="kamar1">
-                <p>INI TEST PAGESHOW</p>
-            </a>
-            <a href="#">
-                <img src="img/kamar1.jpeg" alt="kamar1">
-                <p>INI TEST PAGESHOW</p>
-            </a>
-        </div>
-        
-        <div class="artikel-more">
-            <a href="#">Artikel Selengkapnya</a>
-        </div>
-    </body>
-</html>
+// Valid PHP Version?
+$minPHPVersion = '7.2';
+if (phpversion() < $minPHPVersion)
+{
+	die("Your PHP version must be {$minPHPVersion} or higher to run CodeIgniter. Current version: " . phpversion());
+}
+unset($minPHPVersion);
 
+// Path to the front controller (this file)
+define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
+
+// Location of the Paths config file.
+// This is the line that might need to be changed, depending on your folder structure.
+$pathsPath = realpath(FCPATH . 'app/Config/Paths.php');
+// ^^^ Change this if you move your application folder
+
+/*
+ *---------------------------------------------------------------
+ * BOOTSTRAP THE APPLICATION
+ *---------------------------------------------------------------
+ * This process sets up the path constants, loads and registers
+ * our autoloader, along with Composer's, loads our constants
+ * and fires up an environment-specific bootstrapping.
+ */
+
+// Ensure the current directory is pointing to the front controller's directory
+chdir(__DIR__);
+
+// Load our paths config file
+require $pathsPath;
+$paths = new Config\Paths();
+
+// Location of the framework bootstrap file.
+$app = require rtrim($paths->systemDirectory, '/ ') . '/bootstrap.php';
+
+/*
+ *---------------------------------------------------------------
+ * LAUNCH THE APPLICATION
+ *---------------------------------------------------------------
+ * Now that everything is setup, it's time to actually fire
+ * up the engines and make this app do its thang.
+ */
+$app->run();

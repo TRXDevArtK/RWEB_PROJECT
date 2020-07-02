@@ -1,0 +1,25 @@
+/*.flex-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-body .column {
+    flex: 1 0 30%;
+    border: 5px solid red;
+}*/
+
+.sub-nav-header{
+    position: relative;
+}
+
+hr{
+    position: absolute;
+    border: 2px solid red !important;
+    width: 100%;
+    top: 35%;
+    z-index: 0;
+    font-size: 16px !important; /*Replace Other Config*/
+}
+

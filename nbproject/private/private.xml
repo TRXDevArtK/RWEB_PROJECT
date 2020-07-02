@@ -3,12 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/RWEB_PROJECT/dashboard/pelanggan_opr.php</file>
-            <file>file:/C:/xampp/htdocs/RWEB_PROJECT/dashboard/test.php</file>
-            <file>file:/C:/xampp/htdocs/RWEB_PROJECT/dashboard/pelanggan.php</file>
-            <file>file:/C:/xampp/htdocs/RWEB_PROJECT/dashboard/index.php</file>
-            <file>file:/C:/xampp/htdocs/RWEB_PROJECT/test.php</file>
-            <file>file:/C:/xampp/htdocs/RWEB_PROJECT/dashboard/auth_database.php</file>
+            <file>file:/C:/xampp/htdocs/RWEB_PROJECT/app/Controllers/Agenda.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Pagination_model.php</file>
+            <file>file:/C:/xampp/htdocs/RWEB_PROJECT/app/Views/agenda.php</file>
+            <file>file:/C:/xampp/htdocs/RWEB_PROJECT/app/Controllers/Dashboard/Pelanggan.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Pelanggan_model.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Agenda_model.php</file>
+            <file>file:/C:/xampp/htdocs/RWEB_PROJECT/app/Views/dashboard/pelanggan.php</file>
         </group>
     </open-files>
 </project-private>

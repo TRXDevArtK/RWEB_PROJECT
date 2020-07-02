@@ -1,0 +1,42 @@
+.menu {
+    font-size: 0.8rem;
+    font-size: 13px;
+    margin-bottom: 2.5%;
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid red;
+    border-bottom: 5px solid red;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    border-radius: 25px;
+    flex: 1 0 0; /* grow (stretch/melebar), shrink, (length then wrap) */
+    text-decoration: none;
+    color: black;
+    border: 5px solid blue;
+    margin: 10px;
+    padding: 5px;
+}
+
+.menu a:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.menu .menu-img {
+    border: none;
+    margin: -10px 0;
+    padding: 0;
+}
+
+.menu .menu-img:hover {
+    box-shadow: none !important;
+}
+
+.menu .menu-img img {
+    width: 80px;
+}
+

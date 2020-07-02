@@ -1,9 +1,0 @@
-CRITICAL - 2020-06-18 07:11:10 --> Invalid file: {0}
-#0 C:\xampp\htdocs\RWEB_PROJECT\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home_rsjogjaa.p...')
-#1 C:\xampp\htdocs\RWEB_PROJECT\system\Common.php(1087): CodeIgniter\View\View->render('home_rsjogjaa', Array, true)
-#2 C:\xampp\htdocs\RWEB_PROJECT\app\Controllers\Home.php(7): view('home_rsjogjaa')
-#3 C:\xampp\htdocs\RWEB_PROJECT\system\CodeIgniter.php(914): App\Controllers\Home->index()
-#4 C:\xampp\htdocs\RWEB_PROJECT\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
-#5 C:\xampp\htdocs\RWEB_PROJECT\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#6 C:\xampp\htdocs\RWEB_PROJECT\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#7 {main}
