@@ -90,26 +90,22 @@ $(document).ready(function(){
                 //set tidak ada isi jika error ATAU DATA = 0 (NULL) atau data tidak terbaca
                 var html = '';
                 $('.agenda-body').html(html);
+                console.log(JSON.stringify(xhr));
             },
             success:function(data)
             {
                 var html = '';
                 var count = 0;
+                //console.log(data[count].gambar);
                 for(count; count < data.length; count++){
-                    var binary = new Uint8Array(data[count].gambar);
-                    let blob = new Blob([binary])
-                    let img = new Image()
-                    img.src = URL.createObjectURL(blob)
-                    
                     html += '<a href="#">';
-                    html += '<img src="'+img.src+'" alt="kamar1">';
+                    html += '<img src="data:image/jpeg;base64,'+data[count].gambar+'>';
+                    console.log(count);
                     html += '<p>"'+data[count].judul+'"</p>';
                     html += '<p class="tgl">Mulai : "'+data[count].tanggal+'"</p>';
                     html += '<p class="tgl">Berakhir : "'+data[count].mulai+'"</p>';
                     html += '<p>"'+data[count].deskripsi+'"</p>';
                     html += '</a>';
-                                
-                    //console.log(data[count].id);
                 }
                 //CEK DATA JSON (butuh JSON.stringify
                 //alert(JSON.stringify(data));

@@ -38,6 +38,7 @@ $routes->add('daftar', 'Daftar::index');
 $routes->add('agenda', 'Agenda::index');
 $routes->add('kontak', 'Kontak::index');
 $routes->add('login', 'Login::index');
+$routes->add('artikel', 'Artikel::index');
 
 //Dashboards
 $routes->group('dashboard', function($routes)

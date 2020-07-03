@@ -9,10 +9,10 @@
     <header>
         <div class="menu">
             <a class="menu-img" href="index.php"><img src="public/img/logo.png"></a>
-            <a href="daftar">Daftar</a>
-            <a href="agenda">Agenda</a>
-            <a href="kontak">Kontak</a>
-            <a href="#">Halaman Utama</a>
+            <a href="<?= base_url()."/daftar"; ?>">Daftar</a>
+            <a href="<?= base_url()."/agenda"; ?>">Agenda</a>
+            <a href="<?= base_url()."/kontak"; ?>">Kontak</a>
+            <a href="<?= base_url()."/artikel"; ?>">Artikel</a>
             <a href="#">Halaman Utama</a>
             <a href="#">Halaman Utama</a>
             <a href="#">Halaman Utama</a>

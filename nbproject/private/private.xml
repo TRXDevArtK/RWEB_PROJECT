@@ -5,11 +5,12 @@
         <group>
             <file>file:/C:/xampp/htdocs/RWEB_PROJECT/app/Controllers/Agenda.php</file>
             <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Pagination_model.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/public/css/settings.css</file>
             <file>file:/C:/xampp/htdocs/RWEB_PROJECT/app/Views/agenda.php</file>
-            <file>file:/C:/xampp/htdocs/RWEB_PROJECT/app/Controllers/Dashboard/Pelanggan.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Auth_model.php</file>
             <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Pelanggan_model.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/public/css/agenda.css</file>
             <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Agenda_model.php</file>
-            <file>file:/C:/xampp/htdocs/RWEB_PROJECT/app/Views/dashboard/pelanggan.php</file>
         </group>
     </open-files>
 </project-private>
