@@ -39,6 +39,8 @@ $routes->add('agenda', 'Agenda::index');
 $routes->add('kontak', 'Kontak::index');
 $routes->add('login', 'Login::index');
 $routes->add('artikel', 'Artikel::index');
+$routes->post('artikel/desc_artikel', 'Desc_artikel::index');
+$routes->add('fasilitas', 'Fasilitas::index');
 
 //Dashboards
 $routes->group('dashboard', function($routes)

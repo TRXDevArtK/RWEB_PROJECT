@@ -1,9 +1,9 @@
 <?php namespace App\Models;
 use CodeIgniter\Model;
 
-class Agenda_model extends Model {
+class Fasilitas_model extends Model {
     
-    public function read_agenda($post){
+    public function read_fasilitas($post){
         $limit = $post['limit'];
         if (isset($data['page'])){ 
             $page  = $post['page']; 

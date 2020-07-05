@@ -3,12 +3,21 @@
         <!--Metadata-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="public/css/nav.css" />
+        <?php if(isset($href) && $href === "back_url"){ ?>
+        <!-- untuk deskripsi artikel -->
+            <link rel="stylesheet" href="../public/css/nav.css" />
+        <?php } else { ?>
+            <link rel="stylesheet" href="public/css/nav.css" />
+        <?php } ?>
         <title></title>
     </head>
     <header>
         <div class="menu">
-            <a class="menu-img" href="index.php"><img src="public/img/logo.png"></a>
+            <?php if(isset($href) && $href === "back_url"){ ?>
+                <a class="menu-img" href="<?= base_url(); ?>"><img src="../public/img/logo.png"></a>
+            <?php } else { ?>
+                <a class="menu-img" href="<?= base_url(); ?>"><img src="public/img/logo.png"></a>
+            <?php } ?>
             <a href="<?= base_url()."/daftar"; ?>">Daftar</a>
             <a href="<?= base_url()."/agenda"; ?>">Agenda</a>
             <a href="<?= base_url()."/kontak"; ?>">Kontak</a>
