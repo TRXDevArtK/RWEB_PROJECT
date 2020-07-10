@@ -24,6 +24,6 @@ class Fasilitas extends BaseController
         $data = $pagination->getPagination("fasilitas");
         
         echo view('nav');
-        echo view('agenda', $data);
+        echo view('fasilitas', $data);
     }
 }

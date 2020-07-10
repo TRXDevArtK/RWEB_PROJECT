@@ -38,11 +38,12 @@
 }
 
 .artikel-body a {
-    flex: 1 0 15%; /* atau bias disebu flex-basis: . .; */
     border: 5px solid blue;
     text-decoration: none;
     color: black;
     margin: 10px;
+    flex-basis: 100%;
+    max-width: 230px;
 }
 
 .artikel-body a:hover {
@@ -92,11 +93,12 @@ header .hr_img{
 }
 
 .pageshow a {
-    flex: 1 0 20%; /* atau bias disebu flex-basis: . .; */
     border: 5px solid red;
     text-decoration: none;
     color: black;
     margin: 10px;
+    flex-basis: 100%;
+    max-width: 180px;
 }
 
 .pageshow a:hover {

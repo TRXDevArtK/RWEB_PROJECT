@@ -22,9 +22,8 @@
             <a href="<?= base_url()."/agenda"; ?>">Agenda</a>
             <a href="<?= base_url()."/kontak"; ?>">Kontak</a>
             <a href="<?= base_url()."/artikel"; ?>">Artikel</a>
-            <a href="#">Halaman Utama</a>
-            <a href="#">Halaman Utama</a>
-            <a href="#">Halaman Utama</a>
+            <a href="<?= base_url()."/fasilitas"; ?>">Fasilitas</a>
+            <a href="<?= base_url()."/pelayanan"; ?>">Pelayanan</a>
         </div>
     </header>
 </html>

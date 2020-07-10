@@ -15,7 +15,7 @@ class Fasilitas_model extends Model {
         $start_from = ($page-1) * $limit;  
         
         $db      = \Config\Database::connect();
-        $builder = $db->table('agenda');
+        $builder = $db->table('fasilitas');
         $query   = $builder->get($limit, $start_from);
         $row = $query->getResultArray();
         //ini dah benar, tapi gambarnya response 200
@@ -28,10 +28,6 @@ class Fasilitas_model extends Model {
             $data[$i]['judul'] = $row[$i]['judul'];
             $data[$i]['deskripsi'] = $row[$i]['deskripsi'];
             $data[$i]['gambar'] = base64_encode($row[$i]['gambar']);
-            $data[$i]['mulai'] = $row[$i]['mulai'];
-            $data[$i]['berakhir'] = $row[$i]['berakhir'];
-            $data[$i]['file'] = $row[$i]['file'];
-            //$data[] = $row;
         }
 
         return json_encode($data);
