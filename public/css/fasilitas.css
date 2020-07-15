@@ -7,7 +7,7 @@
 .fasilitas-header p {
     position: relative;
     display: inline-block;
-    border: 5px solid black;
+    border: 5px solid #006d3e;
     background-color: #ffffff;
     color:black;
     padding: 20px;
@@ -16,7 +16,7 @@
 
 .fasilitas-header hr {
     position: absolute;
-    border: 2px solid black;
+    border: 2px solid #006d3e;
     width:100%;
     margin:0;
     top:42px;
@@ -33,13 +33,15 @@
 }
 
 .fasilitas-body img {
-    width: 70%;
-    margin: 5px 0;
+    max-width: 100%;
+    max-height: 180px;
 }
 
 .fasilitas-body .wrap {
-    flex: 1 0 15%; /* atau bias disebut flex-basis: . .; */
-    border: 5px solid blue;
+    max-width: 30%;
+    flex-grow: 1;
+    padding: 5px;
+    border: 2px solid #929292;
     text-decoration: none;
     color: black;
     margin: 10px;
@@ -59,5 +61,11 @@
     font-weight: bold;
     color: green;
     text-decoration: underline;
+}
+
+@media (max-width: 600px){
+    .fasilitas-body .wrap {
+        max-width: 300px;
+    }
 }
 

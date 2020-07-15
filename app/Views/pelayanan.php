@@ -28,19 +28,19 @@
                 <div class="pelayanan-body">
                     <div class="wrap">
                         <img src="public/img/kamar1.jpeg" alt="gambar1">
-                        <h4>"Rawat Jalan"</h4>
+                        <h4>Rawat Jalan</h4>
                         <p>tempat untuk merawat sekaligus jalan</p>
                     </div>
                     
                     <div class="wrap">
                         <img src="public/img/kamar1.jpeg" alt="gambar1">
-                        <h4>"Rawat Jalan"</h4>
+                        <h4>Rawat Jalan</h4>
                         <p>tempat untuk merawat sekaligus jalan</p>
                     </div>
                     
                     <div class="wrap">
                         <img src="public/img/kamar1.jpeg" alt="gambar1">
-                        <h4>"Rawat Jalan"</h4>
+                        <h4>Rawat Jalan</h4>
                         <p>tempat untuk merawat sekaligus jalan</p>
                     </div>
                 </div>
@@ -50,36 +50,36 @@
                 <div class="pelayanan-body">
                     <div class="wrap">
                         <img src="public/img/kamar1.jpeg" alt="gambar1">
-                        <h4>"Rawat Jalan"</h4>
+                        <h4>Rawat Jalan</h4>
                         <p>Pelayanan rawat jalan adalah pelayanan kepada pasien dengan tujuan untuk observasi, diagnosis, pengobatan, rehabilitasi dan pelayanan kesehatan lainnya tanpa mengharuskan pasien tersebut untuk dirawat inap.</p>
                     </div>
                     
                     <div class="wrap">
                         <img src="public/img/kamar1.jpeg" alt="gambar1">
-                        <h4>"Rawat Inap"</h4>
+                        <h4>Rawat Inap</h4>
                         <p>Pelayanan rawat inap adalah pelayanan kepada pasien dengan tujuan untuk pengamatan, diagnosis, pengobatan, rehabilitasi dan pelayanan kesehatan lainnya dengan mengharuskan pasien tersebut untuk dirawat inap.</p>
                     </div>
                     
                     <div class="wrap">
                         <img src="public/img/kamar1.jpeg" alt="gambar1">
-                        <h4>"Rawat Jalan"</h4>
+                        <h4>Rawat Jalan</h4>
                         <p>tempat untuk merawat sekaligus jalan</p>
                     </div>
                     <div class="wrap">
                         <img src="public/img/kamar1.jpeg" alt="gambar1">
-                        <h4>"Rawat Jalan"</h4>
-                        <p>tempat untuk merawat sekaligus jalan</p>
-                    </div>
-                    
-                    <div class="wrap">
-                        <img src="public/img/kamar1.jpeg" alt="gambar1">
-                        <h4>"Rawat Jalan"</h4>
+                        <h4>Rawat Jalan</h4>
                         <p>tempat untuk merawat sekaligus jalan</p>
                     </div>
                     
                     <div class="wrap">
                         <img src="public/img/kamar1.jpeg" alt="gambar1">
-                        <h4>"Rawat Jalan"</h4>
+                        <h4>Rawat Jalan</h4>
+                        <p>tempat untuk merawat sekaligus jalan</p>
+                    </div>
+                    
+                    <div class="wrap">
+                        <img src="public/img/kamar1.jpeg" alt="gambar1">
+                        <h4>Rawat Jalan</h4>
                         <p>tempat untuk merawat sekaligus jalan</p>
                     </div>
                 </div>
@@ -89,19 +89,19 @@
                 <div class="pelayanan-body">
                     <div class="wrap">
                         <img src="public/img/kamar1.jpeg" alt="gambar1">
-                        <h4>"Rawat Jalan"</h4>
+                        <h4>Rawat Jalan</h4>
                         <p>tempat untuk merawat sekaligus jalan</p>
                     </div>
                     
                     <div class="wrap">
                         <img src="public/img/kamar1.jpeg" alt="gambar1">
-                        <h4>"Rawat aaa"</h4>
+                        <h4>Rawat Jalan</h4>
                         <p>tempat untuk merawat sekaligus jalan</p>
                     </div>
                     
                     <div class="wrap">
                         <img src="public/img/kamar1.jpeg" alt="gambar1">
-                        <h4>"Rawat Jalan"</h4>
+                        <h4>Rawat Jalan</h4>
                         <p>tempat untuk merawat sekaligus jalan</p>
                     </div>
                 </div>

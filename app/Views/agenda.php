@@ -101,10 +101,9 @@ $(document).ready(function(){
                     html += '<a href="<?= base_url(); ?>'+data[count].file+'">';
                     html += '<img src="data:image/jpeg;base64, '+data[count].gambar+'" alt="gambar'+count+'">';
                     console.log(count);
-                    html += '<p>"'+data[count].judul+'"</p>';
-                    html += '<p class="tgl">Mulai : "'+data[count].tanggal+'"</p>';
-                    html += '<p class="tgl">Berakhir : "'+data[count].mulai+'"</p>';
-                    html += '<p>"'+data[count].deskripsi+'"</p>';
+                    html += '<p>'+data[count].judul+'</p>';
+                    html += '<p class="tgl">Mulai : '+data[count].mulai+'</p>';
+                    html += '<p class="tgl">Berakhir : '+data[count].berakhir+'</p>';
                     html += '</a>';
                 }
                 //CEK DATA JSON (butuh JSON.stringify

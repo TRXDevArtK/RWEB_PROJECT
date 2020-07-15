@@ -100,8 +100,8 @@ $(document).ready(function(){
                 for(count; count < data.length; count++){
                     html += '<div class="wrap">';
                     html += '<img src="data:image/jpeg;base64, '+data[count].gambar+'" alt="gambar'+count+'">';
-                    html += '<h4>"'+data[count].judul+'"</h4>';
-                    html += '<p>"'+data[count].deskripsi+'"</p>';
+                    html += '<h4>'+data[count].judul+'</h4>';
+                    html += '<p>'+data[count].deskripsi+'</p>';
                     html += '</div>';
                 }
                 //CEK DATA JSON (butuh JSON.stringify

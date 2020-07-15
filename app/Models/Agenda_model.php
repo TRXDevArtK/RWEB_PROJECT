@@ -26,7 +26,6 @@ class Agenda_model extends Model {
         {
             $data[$i]['id'] = $row[$i]['id'];
             $data[$i]['judul'] = $row[$i]['judul'];
-            $data[$i]['deskripsi'] = $row[$i]['deskripsi'];
             $data[$i]['gambar'] = base64_encode($row[$i]['gambar']);
             $data[$i]['mulai'] = $row[$i]['mulai'];
             $data[$i]['berakhir'] = $row[$i]['berakhir'];

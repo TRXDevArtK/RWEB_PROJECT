@@ -53,12 +53,13 @@
 
                     <div class="check">
                         <label class="chk-txt">CENTANG INI JIKA ANDA MANUSIA<input class="chk-box" type="checkbox" value="chk"></label>
-                        <input type="submit" name="submit" class="btn btn-primary" value="Kirimkan / Submit">
+                        <input type="submit" name="submit" class="btn btn-submit" value="Kirimkan / Submit">
                     </div>
                 </form>
             </div>
 
             <div id="info" class="collapse text-center">
+                <img src="public/img/hotline.jpg" alt="hotline" width="100px" height="100px">
                 <h4>Hubungi Kami</h4>
                 <p>Hotline SMS Pengaduan</p><br>
                 <p>No. Telp (Dengan Handphone) :</p>

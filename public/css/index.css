@@ -37,18 +37,13 @@
     margin: 5px 0;
 }
 
-.artikel-body a {
+.artikel-body .wrap {
     border: 5px solid blue;
     text-decoration: none;
     color: black;
     margin: 10px;
     flex-basis: 100%;
     max-width: 230px;
-}
-
-.artikel-body a:hover {
-    background-color: blue;
-    transition: 0.3s;
 }
 
 .artikel-body p {

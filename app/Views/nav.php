@@ -12,6 +12,11 @@
         <title></title>
     </head>
     <header>
+        <?php if(isset($href) && $href === "back_url"){ ?>
+            <a class="menu-img-lower" href="<?= base_url(); ?>"><img src="../public/img/logo.png"></a>
+        <?php } else { ?>
+            <a class="menu-img-lower" href="<?= base_url(); ?>"><img src="public/img/logo.png"></a>
+        <?php } ?>
         <div class="menu">
             <?php if(isset($href) && $href === "back_url"){ ?>
                 <a class="menu-img" href="<?= base_url(); ?>"><img src="../public/img/logo.png"></a>

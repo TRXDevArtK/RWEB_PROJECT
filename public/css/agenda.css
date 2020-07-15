@@ -7,7 +7,7 @@
 .agenda-header p {
     position: relative;
     display: inline-block;
-    border: 5px solid black;
+    border: 5px solid #006d3e;
     background-color: #ffffff;
     color:black;
     padding: 20px;
@@ -16,7 +16,7 @@
 
 .agenda-header hr {
     position: absolute;
-    border: 2px solid black;
+    border: 2px solid #006d3e;
     width:100%;
     margin:0;
     top:42px;
@@ -33,21 +33,28 @@
 }
 
 .agenda-body img {
-    width: 70%;
-    margin: 5px 0;
+    max-width: 100%;
+    max-height: 180px;
 }
 
 .agenda-body a {
-    flex: 1 0 15%; /* atau bias disebut flex-basis: . .; */
-    border: 5px solid blue;
+    /*flex: 1 0 15%;  atau bias disebut flex-basis: . .; */
     text-decoration: none;
     color: black;
     margin: 10px;
+    color: white;
+    background-color: #0092ca;
+    border: 2px solid #505050;
+    max-width: 30%;
+    flex-grow: 1;
+    padding: 5px;
 }
 
 .agenda-body a:hover {
     background-color: blue;
+    color: white;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .agenda-body p {
@@ -56,5 +63,11 @@
 
 .agenda-body .tgl{
     margin: 3px;
-    background-color: red;
+    background-color: #276715;
+}
+
+@media (max-width: 600px){
+    .agenda-body a {
+        max-width: 300px;
+    }
 }

@@ -52,18 +52,7 @@
     </div>
 
     <div class="artikel-body">
-        <a href="#">
-            <img src="public/img/kamar1.jpeg" alt="kamar1">
-            <p>INI TEST PAGESHOW</p>
-        </a>
-        <a href="#">
-            <img src="public/img/kamar1.jpeg" alt="kamar1">
-            <p>INI TEST PAGESHOW</p>
-        </a>
-        <a href="#">
-            <img src="public/img/kamar1.jpeg" alt="kamar1">
-            <p>INI TEST PAGESHOW</p>
-        </a>
+        
     </div>
 
     <div class="artikel-more">
@@ -84,13 +73,13 @@ $(document).ready(function(){
     });
     
     //AMBIL DATA PENDAFTARAN PELANGGAN
-    function fetch_data_artikel(id)
+    function fetch_data_artikel()
     {
         $.ajax({
             url:"<?= current_url(); ?>",
             method:"POST",
             data:{
-                'limit':10,
+                'limit':3,
                 'page':1,
                 'key':'read'
             },
@@ -99,7 +88,6 @@ $(document).ready(function(){
                 //set tidak ada isi jika error ATAU DATA = 0 (NULL) atau data tidak terbaca
                 var html = '';
                 $('.artikel-body').html(html);
-                //console.log(JSON.stringify(xhr));
             },
             success:function(data)
             {
@@ -107,15 +95,19 @@ $(document).ready(function(){
                 var count = 0;
                 //console.log(data[count].gambar);
                 for(count; count < data.length; count++){
-                    html += '<a href="#">';
-                    html += '<img src="public/img/kamar1.jpeg" alt="kamar1">';
-                    html += '<p>INI TEST PAGESHOW</p>';
-                    html += '</a>';
+                    html += '<div class="wrap">';
+                    html += '<img src="data:image/jpeg;base64, '+data[count].gambar+'" alt="gambar'+count+'">';
+                    html += '<p>'+data[count].judul+'</p>';
+                    html += '<form method="post" action="<?= base_url() ?>/artikel/desc_artikel">';
+                    html += '<input type="hidden" name="id" value="'+data[count].id+'">';
+                    html += '<input type="submit" class="slkp" name="submit" value="SELENGKAPNYA">';
+                    html += '</form>';
+                    html += '</div>';
                 }
                 //CEK DATA JSON (butuh JSON.stringify
                 //alert(JSON.stringify(data));
                 
-                $('.fasilitas-body').html(html);
+                $('.artikel-body').html(html);
                 //$('abody').html(html);
             }
         });
