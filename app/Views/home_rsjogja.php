@@ -10,7 +10,10 @@
     <script src="public/js/jquery.min.js"></script>
     <title></title>
 </head>
-<header><img class="hr_img" src="public/img/logo.png"></header>
+<header>
+    <img class="hr_img" src="public/img/logo.png">
+    <a href="<?= base_url()."/dashboard"; ?>"><img class="hr_img_admin" src="public/img/admin.png"></a>
+</header>
 
 <body>
     <div class="welcome_text">
@@ -19,27 +22,27 @@
     </div>
     <div class="pageshow">
         <a href="<?= base_url()."/daftar"; ?>">
-            <img src="public/img/kamar1.jpeg" alt="menu1">
+            <img src="public/img/menus/pendaftaran.png" alt="menu1">
             <p>Klik disini jika ingin daftar sebagai pasien rumah sakit</p>
         </a>
         <a href="<?= base_url()."/agenda"; ?>">
-            <img src="public/img/kamar1.jpeg" alt="menu2">
+            <img src="public/img/menus/agenda.png" alt="menu2">
             <p>Klik disini untuk melihat agenda rumah sakit</p>
         </a>
         <a href="<?= base_url()."/kontak"; ?>">
-            <img src="public/img/kamar1.jpeg" alt="menu3">
+            <img src="public/img/menus/kontak.png" alt="menu3">
             <p>Jika ada masalah dengan rumah sakit, hubungi kami disni</p>
         </a>
         <a href="<?= base_url()."/artikel"; ?>">
-            <img src="public/img/kamar1.jpeg" alt="menu4">
+            <img src="public/img/menus/artikel.png" alt="menu4">
             <p>Jika anda ingin membaca artikel rumah sakit</p>
         </a>
         <a href="<?= base_url()."/fasilitas"; ?>">
-            <img src="public/img/kamar1.jpeg" alt="menu5">
+            <img src="public/img/menus/fasilitas.png" alt="menu5">
             <p>Jika anda ingin melihat fasilitas apa saja yang ada di rumah sakit kami</p>
         </a>
         <a href="<?= base_url()."/pelayanan"; ?>">
-            <img src="public/img/kamar1.jpeg" alt="menu6">
+            <img src="public/img/menus/pelayanan.png" alt="menu6">
             <p>Jika anda ingin melihat berbagai pelayanan di rumah sakit kami</p>
         </a>
 

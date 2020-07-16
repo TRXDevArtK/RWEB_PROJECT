@@ -1,3 +1,7 @@
+body {
+    background-color: #1ba831;
+}
+
 /* Artikel header and garis */
 .artikel-header {
     text-align: center;
@@ -33,17 +37,19 @@
 }
 
 .artikel-body img {
-    width: 35%;
+    width: 50%;
     margin: 5px 0;
 }
 
 .artikel-body .wrap {
-    border: 5px solid blue;
     text-decoration: none;
     color: black;
     margin: 10px;
     flex-basis: 100%;
     max-width: 230px;
+    background-color: white;
+    box-shadow: 0px 4px 5px 4px rgba(0,0,0,0.2);
+    padding: 10px;
 }
 
 .artikel-body p {
@@ -56,9 +62,38 @@
 
 .artikel-more a {
     display: inline-block;
-    border: 5px solid green;
+    border: 5px solid #00632f;
     margin-top: 20px;
     padding: 10px;
+    /* background: border-box; */
+    border-radius: 25px;
+    background-color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.2);
+}
+
+.artikel-more a:hover {
+    background-color: #00632f;
+    transition: 0.3s;
+    color: white;
+}
+
+.artikel-body .slkp {
+    top: 100px;
+    left: 30%;
+    border: 2px solid #f7f7f7;
+    background-color: #00ff78;
+    font-weight: bold;
+    background-color: white;
+    box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.2);
+}
+
+.artikel-body .slkp:hover {
+    box-shadow: -1px 0px 9px 7px rgba(0, 0, 0, 0.29);
+    cursor: pointer;
 }
 
 /* Header */
@@ -68,14 +103,21 @@ header{
 }
 
 header .hr_img{
-    width:35%;
-    top:0;
-    left:0;
+    position: absolute;
+    width:80px;
+    top:20px;
+    left:20px;
+}
+
+header .hr_img_admin {
+    position: absolute;
+    width: 20px;
 }
 
 .welcome_text{
     text-align: center;
     padding-top: 80px;
+    color: white;
 }
 
 /* Pageshow */
@@ -88,25 +130,29 @@ header .hr_img{
 }
 
 .pageshow a {
-    border: 5px solid red;
     text-decoration: none;
     color: black;
     margin: 10px;
-    flex-basis: 100%;
+    max-width: 30%;
+    flex-grow: 1;
+    padding: 5px;
     max-width: 180px;
+    background-color: white;
+    box-shadow: 0px 4px 5px 4px rgba(0,0,0,0.2);
 }
 
 .pageshow a:hover {
-    background-color: blue;
+    background-color: #00a096;
+    color: white;
     transition: 0.3s;
 }
 
 .pageshow p {
-    margin: 16px;
+    margin: 10px;
 }
 
 .pageshow img {
-    width: 35%;
+    width: 50%;
     margin: 5px 0;
 }
 
@@ -124,6 +170,13 @@ header .hr_img{
     /*Welcome text*/
     .welcome_text{
         padding-top: 10px;
+    }
+    
+    header .hr_img{
+        position: static;
+        width:30%;
+        top:20px;
+        left:20px;
     }
 }
 
