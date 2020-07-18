@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="public/css/settings.css" />
-        <link rel="stylesheet" href="public/css/agenda.css" />
+        <link rel="stylesheet" href="public/css/fasilitas.css" />
         <link rel="stylesheet" href="public/css/bootstrap.min.css" /> 
         <link rel="stylesheet" href="public/css/loading.css" />
         <script src="public/js/jquery.min.js"></script>
@@ -12,12 +12,12 @@
         <title></title>
     </head>
     <body>
-        <div class="agenda-header">
+        <div class="fasilitas-header">
             <hr class="hr_line">
-            <p>List Agenda</p>
+            <p>List fasilitas</p>
         </div>
         
-        <div class="agenda-body"></div>
+        <div class="fasilitas-body"></div>
         
         <div class="text-center" <?php if($total_pages == 1){ echo " hidden"; }?>>
             <ul class="pagination">
@@ -70,7 +70,7 @@ $(document).ready(function(){
     });
     
     //AMBIL DATA PENDAFTARAN PELANGGAN
-    function fetch_data_agenda(id)
+    function fetch_data_fasilitas(id)
     {
         //REFRESH PAGE
         //$('#bp2').attr('data-id',2);
@@ -89,49 +89,26 @@ $(document).ready(function(){
             error: function (xhr, status) {
                 //set tidak ada isi jika error ATAU DATA = 0 (NULL) atau data tidak terbaca
                 var html = '';
-                $('.agenda-body').html(html);
-<<<<<<< HEAD
-=======
+                $('.fasilitas-body').html(html);
                 //console.log(JSON.stringify(xhr));
->>>>>>> master
             },
             success:function(data)
             {
                 var html = '';
                 var count = 0;
-<<<<<<< HEAD
-                for(count; count < data.length; count++){
-                    var binary = new Uint8Array(data[count].gambar);
-                    let blob = new Blob([binary])
-                    let img = new Image()
-                    img.src = URL.createObjectURL(blob)
-                    
-                    html += '<a href="#">';
-                    html += '<img src="'+img.src+'" alt="kamar1">';
-                    html += '<p>"'+data[count].judul+'"</p>';
-                    html += '<p class="tgl">Mulai : "'+data[count].tanggal+'"</p>';
-                    html += '<p class="tgl">Berakhir : "'+data[count].mulai+'"</p>';
-                    html += '<p>"'+data[count].deskripsi+'"</p>';
-                    html += '</a>';
-                                
-                    //console.log(data[count].id);
-=======
                 //console.log(data[count].gambar);
                 for(count; count < data.length; count++){
-                    html += '<a href="<?= base_url(); ?>'+data[count].file+'">';
+                    html += '<div class="wrap">';
                     html += '<img src="data:image/jpeg;base64, '+data[count].gambar+'" alt="gambar'+count+'">';
-                    console.log(count);
-                    html += '<p>'+data[count].judul+'</p>';
-                    html += '<p class="tgl">Mulai : '+data[count].mulai+'</p>';
-                    html += '<p class="tgl">Berakhir : '+data[count].berakhir+'</p>';
-                    html += '</a>';
->>>>>>> master
+                    html += '<h4>'+data[count].judul+'</h4>';
+                    html += '<p>'+data[count].deskripsi+'</p>';
+                    html += '</div>';
                 }
                 //CEK DATA JSON (butuh JSON.stringify
                 //alert(JSON.stringify(data));
                 
                 //Masukkan koda tadi ke <tbody> yang ada di html
-                $('.agenda-body').html(html);
+                $('.fasilitas-body').html(html);
                 $(".pageitem").removeClass("active");
                 $("#"+id).addClass("active");
                 //$('abody').html(html);
@@ -160,10 +137,10 @@ $(document).ready(function(){
         $('#bp').attr('data-id',id_string_min);
         $('#bp2').attr('data-id',id_string_plus);
         
-        fetch_data_agenda(id);
+        fetch_data_fasilitas(id);
     })
     
-    fetch_data_agenda();
+    fetch_data_fasilitas();
     
 })  
 </script>

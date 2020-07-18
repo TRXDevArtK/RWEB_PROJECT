@@ -53,7 +53,7 @@ p{
 }
 
 .check .chk-txt {
-    border: 5px solid red;
+    border: 5px solid #fba900;
     padding: 8px;
     vertical-align: middle !important;
 }
@@ -88,13 +88,13 @@ p{
 }
 
 .btn-submit{
-    background-color: white; 
-    color: black; 
+    background-color: #0099cc; 
+    color: white; 
     border: 2px solid #0099cc;
 }
 
 .btn-submit:hover{
-    background-color: #0099cc;
+    background-color: #00e1ff;
     color: white;
 }
 
@@ -102,11 +102,11 @@ p{
 .btn-sub-nav {
     background-color: white; 
     color: black; 
-    border: 2px solid #f44336;
+    border: 2px solid #006d3e;
 }
 
 .btn-sub-nav:hover {
-    background-color: #f44336;
+    background-color: #006d3e;
     color: white;
 }
 

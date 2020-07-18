@@ -1,11 +1,9 @@
 <?php namespace App\Controllers;
 
-class Home extends BaseController
+class Artikel extends BaseController
 {
     public function index()
     {
-<<<<<<< HEAD
-=======
         //FUNGSI UMUM
         //
         //Fungsi ambil post/get/dll , JANGAN LUPA!
@@ -21,10 +19,10 @@ class Home extends BaseController
             return $data;
         }
         
->>>>>>> master
-        echo view("home_rsjogja");
+        $pagination = new \App\Models\Pagination_model;
+        $data = $pagination->getPagination("artikel");
+        
+        echo view('nav');
+        echo view('artikel', $data);
     }
-
-    //--------------------------------------------------------------------
-
 }

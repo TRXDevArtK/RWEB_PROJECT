@@ -33,11 +33,22 @@ $routes->setAutoRoute(false);
 
 //Halaman Utama dan Navigasi
 //Catatan : untuk form, ajax dan pemanggilan self php, jangan pake GET , pake add
+<<<<<<< HEAD
 $routes->get('/', 'Home::index');
+=======
+$routes->add('/', 'Home::index');
+>>>>>>> master
 $routes->add('daftar', 'Daftar::index');
 $routes->add('agenda', 'Agenda::index');
 $routes->add('kontak', 'Kontak::index');
 $routes->add('login', 'Login::index');
+<<<<<<< HEAD
+=======
+$routes->add('artikel', 'Artikel::index');
+$routes->post('artikel/desc_artikel', 'Desc_artikel::index');
+$routes->add('fasilitas', 'Fasilitas::index');
+$routes->add('pelayanan', 'Pelayanan::index');
+>>>>>>> master
 
 //Dashboards
 $routes->group('dashboard', function($routes)

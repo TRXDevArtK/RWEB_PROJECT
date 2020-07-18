@@ -1,9 +1,9 @@
 <?php namespace App\Models;
 use CodeIgniter\Model;
 
-class Agenda_model extends Model {
+class Fasilitas_model extends Model {
     
-    public function read_agenda($post){
+    public function read_fasilitas($post){
         $limit = $post['limit'];
         if (isset($data['page'])){ 
             $page  = $post['page']; 
@@ -15,14 +15,8 @@ class Agenda_model extends Model {
         $start_from = ($page-1) * $limit;  
         
         $db      = \Config\Database::connect();
-        $builder = $db->table('agenda');
+        $builder = $db->table('fasilitas');
         $query   = $builder->get($limit, $start_from);
-<<<<<<< HEAD
-        
-        foreach($query->getResult() as $row)
-        {
-            $data[] = $row;
-=======
         $row = $query->getResultArray();
         //ini dah benar, tapi gambarnya response 200
 
@@ -32,12 +26,8 @@ class Agenda_model extends Model {
         {
             $data[$i]['id'] = $row[$i]['id'];
             $data[$i]['judul'] = $row[$i]['judul'];
+            $data[$i]['deskripsi'] = $row[$i]['deskripsi'];
             $data[$i]['gambar'] = base64_encode($row[$i]['gambar']);
-            $data[$i]['mulai'] = $row[$i]['mulai'];
-            $data[$i]['berakhir'] = $row[$i]['berakhir'];
-            $data[$i]['file'] = $row[$i]['file'];
-            //$data[] = $row;
->>>>>>> master
         }
 
         return json_encode($data);

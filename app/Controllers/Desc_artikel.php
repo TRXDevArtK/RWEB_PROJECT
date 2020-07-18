@@ -1,11 +1,9 @@
 <?php namespace App\Controllers;
 
-class Home extends BaseController
+class Desc_artikel extends BaseController
 {
     public function index()
     {
-<<<<<<< HEAD
-=======
         //FUNGSI UMUM
         //
         //Fungsi ambil post/get/dll , JANGAN LUPA!
@@ -16,15 +14,16 @@ class Home extends BaseController
         //Tapi itu harus enable auto routing . . 
         $artikel = new \App\Models\Artikel_model();
         
-        if(isset($_POST['key']) && $_POST['key'] == 'read'){
-            $data = $artikel->read_artikel($request->getPost());
-            return $data;
+        if(isset($_POST['submit'])){
+            $data = $artikel->read_desc_artikel($request->getPost());
+            
+            $href['href'] = "back_url";
+            echo view('nav', $href);
+            echo view('desc_artikel', $data);
+            //print_r($data);
         }
-        
->>>>>>> master
-        echo view("home_rsjogja");
+        else{
+            echo "maaf page tidak ada";
+        }
     }
-
-    //--------------------------------------------------------------------
-
 }
