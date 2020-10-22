@@ -2,19 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Pagination_model.php</file>
-            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Dokter_model.php</file>
-            <file>file:/C:/xampp/htdocs/rweb_project/app/Controllers/Home.php</file>
-            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Pelayanan_model.php</file>
-            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Users_model.php</file>
-            <file>file:/C:/xampp/htdocs/rweb_project/app/Controllers/Login.php</file>
-            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Auth_model.php</file>
-            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Fasilitas_model.php</file>
-            <file>file:/C:/xampp/htdocs/rweb_project/app/Helpers/auth_helper.php</file>
-            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Pelanggan_model.php</file>
-            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Agenda_model.php</file>
-            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Artikel_model.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
