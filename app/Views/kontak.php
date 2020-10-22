@@ -59,7 +59,10 @@
             </div>
 
             <div id="info" class="collapse text-center">
+<<<<<<< HEAD:app/Views/kontak.php
+=======
                 <img src="public/img/hotline.jpg" alt="hotline" width="100px" height="100px">
+>>>>>>> master:kontak.php
                 <h4>Hubungi Kami</h4>
                 <p>Hotline SMS Pengaduan</p><br>
                 <p>No. Telp (Dengan Handphone) :</p>

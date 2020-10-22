@@ -1,15 +1,32 @@
+<<<<<<< HEAD
+<?php
+
+?>
+
+=======
+>>>>>>> master
 <html>
     <head>
         <!--Metadata-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="public/css/settings.css" />
+<<<<<<< HEAD
+        <link rel="stylesheet" href="public/css/index.css" />
+=======
         <link rel="stylesheet" href="public/css/index_a.css" />
+>>>>>>> master
         <script src="public/js/jquery.min.js"></script>  
         <title></title>
     </head>
     <body>
         <div class="body"> <!-- format untuk body atau konten -->
+<<<<<<< HEAD
+            <a href="dashboard/pelanggan">Form Pendaftaran</a>
+            <form action="dashboard" method="post">
+                <input name=destroy type="submit" value="LOGOUT">
+            </form>
+=======
             <form action="dashboard" method="post">
                 <input class="button button1" name=destroy type="submit" value="LOGOUT">
             </form>
@@ -28,6 +45,7 @@
                 </div>
             </div>
             <!-- PAGESHOW (END) -->
+>>>>>>> master
         </div>
     </body>
 </html>

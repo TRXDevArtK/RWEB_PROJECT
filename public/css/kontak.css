@@ -16,7 +16,11 @@
 
 hr{
     position: absolute;
+<<<<<<< HEAD:public/css/kontak.css
+    border: 2px solid red !important;
+=======
     border: 2px solid #006d3e !important;
+>>>>>>> master:css/kontak.css
     width: 100%;
     top: 20% !important;
     z-index: 0;

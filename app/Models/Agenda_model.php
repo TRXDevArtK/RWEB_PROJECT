@@ -17,6 +17,12 @@ class Agenda_model extends Model {
         $db      = \Config\Database::connect();
         $builder = $db->table('agenda');
         $query   = $builder->get($limit, $start_from);
+<<<<<<< HEAD
+        
+        foreach($query->getResult() as $row)
+        {
+            $data[] = $row;
+=======
         $row = $query->getResultArray();
         //ini dah benar, tapi gambarnya response 200
 
@@ -31,6 +37,7 @@ class Agenda_model extends Model {
             $data[$i]['berakhir'] = $row[$i]['berakhir'];
             $data[$i]['file'] = $row[$i]['file'];
             //$data[] = $row;
+>>>>>>> master
         }
 
         return json_encode($data);

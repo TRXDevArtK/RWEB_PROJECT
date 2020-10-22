@@ -4,6 +4,8 @@ class Home extends BaseController
 {
     public function index()
     {
+<<<<<<< HEAD
+=======
         //FUNGSI UMUM
         //
         //Fungsi ambil post/get/dll , JANGAN LUPA!
@@ -19,6 +21,7 @@ class Home extends BaseController
             return $data;
         }
         
+>>>>>>> master
         echo view("home_rsjogja");
     }
 

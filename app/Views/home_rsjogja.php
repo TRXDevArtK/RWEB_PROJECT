@@ -10,10 +10,14 @@
     <script src="public/js/jquery.min.js"></script>
     <title></title>
 </head>
+<<<<<<< HEAD
+<header><img class="hr_img" src="public/img/logo.png"></header>
+=======
 <header>
     <img class="hr_img" src="public/img/logo.png">
     <a href="<?= base_url()."/dashboard"; ?>"><img class="hr_img_admin" src="public/img/admin.png"></a>
 </header>
+>>>>>>> master
 
 <body>
     <div class="welcome_text">
@@ -21,6 +25,39 @@
         <h4>Di Rumah Sakit Jogja</h4>
     </div>
     <div class="pageshow">
+<<<<<<< HEAD
+        <a href="daftar">
+            <img src="public/img/kamar1.jpeg" alt="kamar1">
+            <p>INI TEST PAGESHOW</p>
+        </a>
+        <a href="#">
+            <img src="public/img/kamar1.jpeg" alt="kamar1">
+            <p>INI TEST PAGESHOW</p>
+        </a>
+        <a href="#">
+            <img src="public/img/kamar1.jpeg" alt="kamar1">
+            <p>INI TEST PAGESHOW</p>
+        </a>
+        <a href="#">
+            <img src="public/img/kamar1.jpeg" alt="kamar1">
+            <p>INI TEST PAGESHOW</p>
+        </a>
+        <a href="#">
+            <img src="public/img/kamar1.jpeg" alt="kamar1">
+            <p>INI TEST PAGESHOW</p>
+        </a>
+        <a href="#">
+            <img src="public/img/kamar1.jpeg" alt="kamar1">
+            <p>INI TEST PAGESHOW</p>
+        </a>
+        <a href="#">
+            <img src="public/img/kamar1.jpeg" alt="kamar1">
+            <p>INI TEST PAGESHOW</p>
+        </a>
+        <a href="#">
+            <img src="public/img/kamar1.jpeg" alt="kamar1">
+            <p>INI TEST PAGESHOW</p>
+=======
         <a href="<?= base_url()."/daftar"; ?>">
             <img src="public/img/menus/pendaftaran.png" alt="menu1">
             <p>Klik disini jika ingin daftar sebagai pasien rumah sakit</p>
@@ -44,6 +81,7 @@
         <a href="<?= base_url()."/pelayanan"; ?>">
             <img src="public/img/menus/pelayanan.png" alt="menu6">
             <p>Jika anda ingin melihat berbagai pelayanan di rumah sakit kami</p>
+>>>>>>> master
         </a>
 
     </div>
@@ -55,6 +93,28 @@
     </div>
 
     <div class="artikel-body">
+<<<<<<< HEAD
+        <a href="#">
+            <img src="public/img/kamar1.jpeg" alt="kamar1">
+            <p>INI TEST PAGESHOW</p>
+        </a>
+        <a href="#">
+            <img src="public/img/kamar1.jpeg" alt="kamar1">
+            <p>INI TEST PAGESHOW</p>
+        </a>
+        <a href="#">
+            <img src="public/img/kamar1.jpeg" alt="kamar1">
+            <p>INI TEST PAGESHOW</p>
+        </a>
+    </div>
+
+    <div class="artikel-more">
+        <a href="#">Artikel Selengkapnya</a>
+    </div>
+</body>
+
+</html>
+=======
         
     </div>
 
@@ -120,3 +180,4 @@ $(document).ready(function(){
     
 })  
 </script>
+>>>>>>> master
