@@ -19,6 +19,7 @@ class Home extends BaseController
             return $data;
         }
         
+		echo "abc";
         echo view("home_rsjogja");
     }
 
