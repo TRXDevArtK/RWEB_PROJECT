@@ -2,6 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Views/home_rsjogja.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Views/dashboard/kontak.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Controllers/Dashboard/Pelanggan.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Controllers/Dashboard/Kontak.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Config/Routes.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Views/pelayanan.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Views/login.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Views/dashboard/index.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Views/dashboard/pelanggan.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Views/dashboard/nav_op.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Pelanggan_model.php</file>
+            <file>file:/C:/xampp/htdocs/rweb_project/app/Models/Kontak_model.php</file>
+        </group>
     </open-files>
 </project-private>

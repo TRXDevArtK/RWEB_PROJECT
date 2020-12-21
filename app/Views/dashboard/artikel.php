@@ -3,20 +3,32 @@
         <!--Metadata-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="public/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="public/css/settings.css" />
-        <link rel="stylesheet" href="public/css/artikel.css" />
-        <script src="public/js/jquery.min.js"></script>  
-        <script src="public/js/bootstrap.min.js"></script>  
+        <link rel="stylesheet" href="../public/css/settings.css" />
+        <link rel="stylesheet" href="../public/css/bootstrap.min.css" /> 
+        <link rel="stylesheet" href="../public/css/loading.css" />
+        <script src="../public/js/jquery.min.js"></script>
+        <script src="../public/js/bootstrap.min.js"></script>  
         <title></title>
     </head>
     <body>
-        <div class="artikel-header">
-            <hr class="hr_line">
-            <p>List Artikel</p>
-        </div>
-        <div class="body">
-            
+        <div class="container">
+            <br />
+            <h3 align="center">List Artikel</h3>
+            <br />
+            <form method="post" id="update_form">
+                <br />
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <th width="5%">No</th>
+                            <th width="70%">Nama</th>
+                            <th width="25%">Menu</th>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </form>
+            <!--PERHATIAN, CSS TABEL DAN ISINYA MASIH MENGGUNAKAN BOOTSTRAP 3.3.7, SILAHKAN KALAU MAU GANTI ATAU MODIF -->
             <div class="text-center" <?php if($total_pages == 1){ echo " hidden"; }?>>
                 <ul class="pagination">
                     <?php 
@@ -54,13 +66,12 @@
                     ?>
                 </ul>
             </div>
-              
-            
         </div>
+        <div class="ajaxload"><!-- ini loading ajax --></div>
     </body>
 </html>
 
-<script>
+<script> //PAKAI ACTIVE JAVASCRIPT (AJAX)
 $(document).ready(function(){
     
     $body = $("body");
@@ -71,7 +82,7 @@ $(document).ready(function(){
     });
     
     //AMBIL DATA PENDAFTARAN PELANGGAN
-    function fetch_data_listartikel(id)
+    function fetch_data_artikel(id)
     {
         //REFRESH PAGE
         //$('#bp2').attr('data-id',2);
@@ -86,40 +97,44 @@ $(document).ready(function(){
                 'page':id,
                 'key':'read'
             },
-            dataType:"json",
+            dataType: 'text',
             error: function (xhr, status) {
                 //set tidak ada isi jika error ATAU DATA = 0 (NULL) atau data tidak terbaca
                 var html = '';
-                $('.body').html(html);
-                //console.log(JSON.stringify(xhr));
+                $('tbody').html(html);
             },
             success:function(data)
             {
                 var html = '';
                 var count = 0;
-                //console.log(data[count].gambar);
                 for(count; count < data.length; count++){
-                    html += '<div class="artikel-flow">';
-                    html += '<img src="data:image/jpeg;base64, '+data[count].gambar+'" alt="gambar'+count+'">';
-                    html += '<div class="artikel-body">';
-                    html += '<p class="header">'+data[count].judul+'</p>';
-                    html += '<div class="not">'
-                    html += '<p class="not-ele" style="margin-right:5px;">tgl : '+data[count].tanggal+'</p>';
-                    html += '<p class="not-ele">Penulis : '+data[count].penulis+'</p>'
-                    html += '</div>'
-                    html += '<div class="text-control">';
-                    html += '<p class="desc" max="70">'+data[count].deskripsi+'</p>';
-                    html += '<form method="post" action="<?= base_url() ?>/artikel/desc_artikel">';
-                    html += '<input type="hidden" name="id" value="'+data[count].id+'">';
-                    html += '<input type="submit" class="slkp" name="submit" value="SELENGKAPNYA">';
-                    html += '</form>';
-                    html += '</div></div></div>';
+                    html += '<tr>';
+                    html += '<td>'+(count+1)+'</td>';
+                    html += '<td>'+data[count].nama+'</td>';
+                    html += '<td>'+data[count].ktp+'</td>';
+                    //html += '<td><button id="soak">SOAK</button></td>';
+                    html += '<td>';
+                    
+                    var date = new Date(data[count].tgl);
+                    var hari = date.getDate();
+                    var bulan = date.getMonth() + 1;
+                    var tahun = date.getFullYear();
+                                    
+                    html += '<input type="button" data-toggle="modal" data-target="#peserta_modal" id_s="'+data[count].id+'" ktp="'+data[count].ktp+'" \n\
+                                nama="'+data[count].nama+'" tlp="'+data[count].tlp+'" email="'+data[count].email+'" tgl="'+data[count].tgl+'"\n\
+                                hari="'+hari+'" bulan="'+bulan+'" tahun="'+tahun+'" jk="'+data[count].jk+'"\n\
+                                id="edit_peserta" name="edit_peserta" class="btn btn-primary pull-left" style="margin-left:10px;" \n\
+                                value="Lihat / Edit Data">';
+    
+                    html += '</td></tr>';          
+                                
+                    //console.log(data[count].id);
                 }
                 //CEK DATA JSON (butuh JSON.stringify
                 //alert(JSON.stringify(data));
                 
                 //Masukkan koda tadi ke <tbody> yang ada di html
-                $('.body').html(html);
+                $('tbody').html(html);
                 $(".pageitem").removeClass("active");
                 $("#"+id).addClass("active");
                 //$('abody').html(html);
@@ -148,10 +163,10 @@ $(document).ready(function(){
         $('#bp').attr('data-id',id_string_min);
         $('#bp2').attr('data-id',id_string_plus);
         
-        fetch_data_listartikel(id);
+        fetch_data_artikel(id);
     })
     
-    fetch_data_listartikel();
+    fetch_data_artikel();
     
-})  
+})
 </script>

@@ -48,10 +48,11 @@ $routes->group('dashboard', function($routes)
 {
     $routes->add('/', 'Dashboard\Dashboard::index');
     $routes->add('pelanggan', 'Dashboard\Pelanggan::index');
-    $routes->get('pelanggan_opr', 'Dashboard\Pelanggan::index');
-    $routes->get('agenda', 'Dashboard\agenda::index');
-    $routes->get('artikel', 'Dashboard\artikel::index');
-    $routes->get('dokter', 'Dashboard\dokter::index');
+    $routes->add('agenda', 'Dashboard\Agenda::index');
+    $routes->add('artikel', 'Dashboard\Artikel::index');
+    $routes->add('dokter', 'Dashboard\Dokter::index');
+    $routes->add('kontak', 'Dashboard\Kontak::index');
+    $routes->add('logout', 'Dashboard\Logout::index');
 });
 
 // Routes untuk database

@@ -28,18 +28,18 @@
                 <p>Ada kesan, pesan, kritikan dan saran anda tentang pelayanan di RSUD Kota Yogyakarta dapat anda sampaikan disini</p>
                 <p>Kesan, pesan, kritikan dan saran anda akan mnenjadi bagian dari peningkatan pelayanan kami</p>
 
-                <form action="#" method="post">
+                <form action="<?= base_url()."/kontak" ?>" method="post">
 
                     <div class="form-group">
                         <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama" required="require">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" name="alamat" placeholder="Masukkan Alamat" required="require">
+                        <input type="text" class="form-control" name="alamat" placeholder="Masukkan Alamat (Optional)">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" name="nohp" placeholder="Masukkan Nomor Handphone" required="require">
+                        <input type="text" class="form-control" name="hp" placeholder="Masukkan Nomor Handphone (Optional)">
                     </div>
 
                     <div class="form-group">
@@ -48,6 +48,10 @@
 
                     <div class="form-group">
                         <input type="text" class="form-control" name="subjek" placeholder="Masukkan Subjek ( Judul )" required="require">
+                    </div>
+                    
+                     <div class="form-group">
+                         <textarea type="text" class="form-control" name="deskripsi" placeholder="Masukkan Deskripsinya" required="require"></textarea>
                     </div>
 
 

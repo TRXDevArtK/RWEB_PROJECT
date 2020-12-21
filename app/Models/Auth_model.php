@@ -48,4 +48,9 @@ class Auth_model extends Model {
         //return redirect()->to(base_url()."/");
         //cek error
     }
+    
+    public function logout(){
+        session_destroy();
+        redirect()->to(base_url().'/login');
+    }
 }
