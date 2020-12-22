@@ -33,6 +33,14 @@
                         <a href="<?= base_url()."/dashboard/kontak"; ?>" class="cta">Klik Disini</a>
                         
                     </div>
+
+                    <div class="service service2">
+                        <h4>Data Dokter</h4>
+                        <p>Tempat untuk melihat data dari dokter</p>
+                        <a href="<?= base_url()."/dashboard/kontak"; ?>" class="cta">Klik Disini</a>
+                        
+                    </div>
+
                 </div>
             </div>
             <!-- PAGESHOW (END) -->
