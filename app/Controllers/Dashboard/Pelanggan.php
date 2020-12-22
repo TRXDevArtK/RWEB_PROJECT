@@ -54,7 +54,8 @@ class Pelanggan extends Controller
         
         $pagination = new \App\Models\Pagination_model;
         $data = $pagination->getPagination("pelanggan");
-
-        return view('dashboard/pelanggan', $data);
+        
+        echo view('dashboard/nav_op');
+        echo view('dashboard/pelanggan', $data);
     }
 }
