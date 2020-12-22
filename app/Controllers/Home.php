@@ -18,7 +18,6 @@ class Home extends BaseController
             $data = $artikel->read_artikel($request->getPost());
             return $data;
         }
-        
         echo view("home_rsjogja");
     }
 

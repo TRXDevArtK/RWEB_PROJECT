@@ -27,6 +27,8 @@
                 <h4>Kesan dan Pesan</h4>
                 <p>Ada kesan, pesan, kritikan dan saran anda tentang pelayanan di RSUD Kota Yogyakarta dapat anda sampaikan disini</p>
                 <p>Kesan, pesan, kritikan dan saran anda akan mnenjadi bagian dari peningkatan pelayanan kami</p>
+                <!-- Kesan : Project Ini Dapat Disempurnakan Apabila Kerjasama Tim Memang Tercipta Dan Tim Tersebut Sedang Memiliki Waktu Luang -->
+                <!-- Pesan : Lebih Baik Dalam Memanajemen Waktu Dan Mengerjakan Projek Ini, Maka Project Ini Akan Berhasil Dikerjakan Secara Maksimal-->
 
                 <form action="<?= base_url()."/kontak" ?>" method="post">
 
