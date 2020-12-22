@@ -161,7 +161,7 @@ $(document).ready(function(){
                                 alamat="'+data[count].alamat+'" hp="'+data[count].hp+'" email="'+data[count].email+'" subjek="'+data[count].subjek+'"\n\
                                 deskripsi="'+data[count].deskripsi+'"\n\
                                 id="edit_knp" name="edit_knp" class="btn btn-primary pull-left" style="margin-left:10px;" \n\
-                                value="Lihat / Edit Data">';
+                                value="Lihat Data">';
 //    
                     html += '</td></tr>';          
                                 
