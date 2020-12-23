@@ -29,7 +29,7 @@ class Kontak_model extends Model {
     
     public function insert_knp($post){
         $db      = \Config\Database::connect();
-        $builder = $db->table("knp");
+        $builder = $db->table("kontak");
 
         //EMAIL
         if(!empty($post['email'])){
