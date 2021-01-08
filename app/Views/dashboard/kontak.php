@@ -26,22 +26,22 @@
                     </div>
                     <div class="modal-body">
                         <form action="#" method="post" id="pelanggan">
-                            <label>Jenis Kelamin : </label>
+                            <label>Nama  : </label>
                             <input type="text" name="nama" placeholder="Nama" id="nama"readonly>
 
-                            <label>Jenis Kelamin : </label>
+                            <label>Alamat : </label>
                             <input type="text" name="alamat" placeholder="Alamat" id="tlp" readonly>
 
-                            <label>Jenis Kelamin : </label>
+                            <label>Email : </label>
                             <input type="text" name="email" placeholder="Alamat Email" id="email" readonly>
 
-                            <label>Jenis Kelamin : </label>
+                            <label>Nomor HP : </label>
                             <input type="text" name="hp" placeholder="No HP" id="hp" readonly>
                             
-                            <label>Jenis Kelamin : </label>
+                            <label>Subjek : </label>
                             <input type="text" name="subjek" placeholder="Subjek" id="subjek" readonly>
                             
-                            <label>Jenis Kelamin : </label>
+                            <label>Deskripsi : </label>
                             <br>
                             <textarea type="text" name="deskripsi" class="form-control" placeholder="Deskripsi" id="deskripsi" readonly></textarea>
 
@@ -56,7 +56,7 @@
             </div>
             
             <br />
-            <h3 align="center">List Kontak</h3>
+            <h3 align="center">List data kesan dan pesan</h3>
             <br />
             <form method="post" id="update_form">
                 <br />
